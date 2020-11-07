@@ -1,0 +1,201 @@
+- name: firstname
+  order: 0
+  type: string
+  default: ''
+- name: commonname
+  order: 1
+  type: string
+  default: ''
+- name: surname
+  order: 2
+  type: string
+  default: ''
+- name: skintypecode
+  order: 3
+  type: int
+  range:
+    min: 0
+    max: 160
+  default: 0
+- name: bodytypecode
+  order: 4
+  type: int
+  range:
+    min: 1
+    max: 256
+  default: 1
+- name: haircolorcode
+  order: 5
+  type: int
+  range:
+    min: 0
+    max: 15
+  default: 1
+- name: facialhairtypecode
+  order: 6
+  type: int
+  range:
+    min: 0
+    max: 19
+  default: 0
+- name: managerid
+  order: 7
+  type: int
+  range:
+    min: 1
+    max: 500000
+  default: 1
+- name: hairtypecode
+  order: 8
+  type: int
+  range:
+    min: 0
+    max: 1023
+  default: 0
+- name: headtypecode
+  order: 9
+  type: int
+  range:
+    min: 0
+    max: 16000
+  default: 0
+- name: height
+  order: 10
+  type: int
+  range:
+    min: 130
+    max: 215
+  default: 180
+- name: seasonaloutfitid
+  order: 11
+  type: int
+  range:
+    min: 0
+    max: 1000000
+  default: 5509
+- name: weight
+  order: 12
+  type: int
+  range:
+    min: 30
+    max: 115
+  default: 80
+- name: hashighqualityhead
+  order: 13
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: gender
+  order: 14
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: headassetid
+  order: 15
+  type: int
+  range:
+    min: 0
+    max: 500000
+  default: 0
+- name: ethnicity
+  order: 16
+  type: int
+  range:
+    min: 1
+    max: 11
+  default: 2
+- name: faceposerpreset
+  order: 17
+  type: int
+  range:
+    min: 0
+    max: 15
+  default: 0
+- name: teamid
+  order: 18
+  type: int
+  range:
+    min: 1
+    max: 200000
+  default: 1
+- name: eyebrowcode
+  order: 19
+  type: int
+  range:
+    min: 0
+    max: 15
+  default: 0
+- name: eyecolorcode
+  order: 20
+  type: int
+  range:
+    min: 1
+    max: 16
+  default: 3
+- name: personalityid
+  order: 21
+  type: int
+  range:
+    min: 0
+    max: 2
+  default: 1
+- name: headclasscode
+  order: 22
+  type: int
+  range:
+    min: 0
+    max: 2
+  default: 1
+- name: nationality
+  order: 23
+  type: int
+  range:
+    min: 0
+    max: 3000
+  default: 1
+- name: sideburnscode
+  order: 24
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 0
+- name: headvariation
+  order: 25
+  type: int
+  range:
+    min: 0
+    max: 31
+  default: 0
+- name: skintonecode
+  order: 26
+  type: int
+  range:
+    min: 1
+    max: 11
+  default: 2
+- name: outfitid
+  order: 27
+  type: int
+  range:
+    min: 0
+    max: 1000000
+  default: 5510
+- name: hairstylecode
+  order: 28
+  type: int
+  range:
+    min: 0
+    max: 31
+  default: 0
+- name: facialhaircolorcode
+  order: 29
+  type: int
+  range:
+    min: 0
+    max: 11
+  default: 0

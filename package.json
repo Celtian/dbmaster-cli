@@ -1,0 +1,68 @@
+{
+  "name": "db-master-converter",
+  "version": "0.0.0",
+  "description": "Tool for converting tables between Fifa Soccer Games",
+  "bin": {
+    "dbmaster": "dist/bin/dbmaster.js"
+  },
+  "scripts": {
+    "start": "ts-node bin/dbmaster.ts",
+    "start:watch": "tsc-watch --project tsconfig.json --onSuccess \"yarn start\"",
+    "build": "tsc",
+    "local": "npm i -g && dbmaster",
+    "release:patch": "git checkout master && npm version patch -m \"chore(update): patch release %s 🐛 \"",
+    "release:minor": "git checkout master && npm version minor -m \"chore(update): release %s 🚀\"",
+    "release:major": "git checkout master && npm version major -m \"chore(update): major release %s 💥 \""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Celtian/db-master-converter.git"
+  },
+  "keywords": [
+    "fifa",
+    "convert",
+    "db-master"
+  ],
+  "author": {
+    "name": "Dominik Hladík",
+    "email": "dominik.hladik@seznam.cz"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Celtian/db-master-converter/issues"
+  },
+  "homepage": "https://github.com/Celtian/db-master-converter#readme",
+  "engines": {
+    "node": ">= 10"
+  },
+  "dependencies": {
+    "byline": "^5.0.0",
+    "chalk": "^4.1.0",
+    "clear": "^0.1.0",
+    "commander": "^6.2.0",
+    "figlet": "^1.5.0",
+    "iconv-lite": "^0.6.2",
+    "joi": "^17.3.0",
+    "js-yaml": "^3.14.0",
+    "os-name": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/byline": "^4.2.32",
+    "@types/clear": "^0.1.0",
+    "@types/figlet": "^1.2.1",
+    "@types/joi": "^14.3.4",
+    "@types/js-yaml": "^3.12.5",
+    "@types/node": "^14.14.5",
+    "husky": "^4.3.0",
+    "prettier": "^2.1.2",
+    "pretty-quick": "^3.1.0",
+    "ts-node": "^9.0.0",
+    "tslint": "^6.1.3",
+    "typescript": "^4.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}

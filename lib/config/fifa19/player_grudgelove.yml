@@ -1,0 +1,21 @@
+- name: level_of_emotion
+  order: 0
+  type: int
+  range:
+    min: 0
+    max: 7
+  default: 1
+- name: playerid
+  order: 1
+  type: int
+  range:
+    min: 0
+    max: 500000
+  default: 1
+- name: emotional_teamid
+  order: 2
+  type: int
+  range:
+    min: 1
+    max: 200000
+  default: 1

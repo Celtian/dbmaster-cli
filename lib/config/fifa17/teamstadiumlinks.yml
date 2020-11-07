@@ -1,0 +1,18 @@
+- name: stadiumname
+  order: 0
+  type: string
+  default: ''
+- name: stadiumid
+  order: 1
+  type: int
+  range:
+    min: 0
+    max: 511
+  default: 0
+- name: teamid
+  order: 2
+  type: int
+  range:
+    min: 1
+    max: 200000
+  default: 1

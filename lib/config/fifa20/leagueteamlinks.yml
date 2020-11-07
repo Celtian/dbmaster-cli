@@ -1,0 +1,238 @@
+- name: homega
+  order: 0
+  type: int
+  range:
+    min: 0
+    max: 200
+  default: 0
+- name: previousyeartableposition
+  order: 1
+  type: int
+  range:
+    min: 1
+    max: 256
+  default: 1
+- name: homegf
+  order: 2
+  type: int
+  range:
+    min: 0
+    max: 200
+  default: 0
+- name: currenttableposition
+  order: 3
+  type: int
+  range:
+    min: 1
+    max: 256
+  default: 1
+- name: awaygf
+  order: 4
+  type: int
+  range:
+    min: 0
+    max: 200
+  default: 0
+- name: awayga
+  order: 5
+  type: int
+  range:
+    min: 0
+    max: 200
+  default: 0
+- name: teamshortform
+  order: 6
+  type: int
+  range:
+    min: 0
+    max: 100
+  default: 50
+- name: hasachievedobjective
+  order: 7
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: yettowin
+  order: 8
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: unbeatenallcomps
+  order: 9
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: unbeatenleague
+  order: 10
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: champion
+  order: 11
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: leagueid
+  order: 12
+  type: int
+  range:
+    min: 1
+    max: 4000
+  default: 1
+- name: prevleagueid
+  order: 13
+  type: int
+  range:
+    min: 1
+    max: 3000
+  default: 1
+- name: highestpossible
+  order: 14
+  type: int
+  range:
+    min: 0
+    max: 20
+  default: 0
+- name: teamform
+  order: 15
+  type: int
+  range:
+    min: 0
+    max: 22222
+  default: 0
+- name: highestprobable
+  order: 16
+  type: int
+  range:
+    min: 0
+    max: 20
+  default: 0
+- name: homewins
+  order: 17
+  type: int
+  range:
+    min: 0
+    max: 25
+  default: 0
+- name: artificialkey
+  order: 18
+  type: int
+  range:
+    min: 0
+    max: 4000
+  default: 0
+- name: nummatchesplayed
+  order: 19
+  type: int
+  range:
+    min: 0
+    max: 50
+  default: 0
+- name: teamid
+  order: 20
+  type: int
+  range:
+    min: 1
+    max: 200000
+  default: 1
+- name: grouping
+  order: 21
+  type: int
+  range:
+    min: 0
+    max: 20
+  default: 0
+- name: awaywins
+  order: 22
+  type: int
+  range:
+    min: 0
+    max: 25
+  default: 0
+- name: objective
+  order: 23
+  type: int
+  range:
+    min: 0
+    max: 20
+  default: 0
+- name: points
+  order: 24
+  type: int
+  range:
+    min: 0
+    max: 4095
+  default: 0
+- name: actualvsexpectations
+  order: 25
+  type: int
+  range:
+    min: 0
+    max: 4
+  default: 0
+- name: homelosses
+  order: 26
+  type: int
+  range:
+    min: 0
+    max: 25
+  default: 0
+- name: unbeatenhome
+  order: 27
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: lastgameresult
+  order: 28
+  type: int
+  range:
+    min: -1
+    max: 2
+  default: 0
+- name: unbeatenaway
+  order: 29
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: awaylosses
+  order: 30
+  type: int
+  range:
+    min: 0
+    max: 25
+  default: 0
+- name: awaydraws
+  order: 31
+  type: int
+  range:
+    min: 0
+    max: 25
+  default: 0
+- name: homedraws
+  order: 32
+  type: int
+  range:
+    min: 0
+    max: 25
+  default: 0
+- name: teamlongform
+  order: 33
+  type: int
+  range:
+    min: 0
+    max: 100
+  default: 50

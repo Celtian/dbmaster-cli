@@ -1,0 +1,92 @@
+- name: firstname
+  order: 0
+  type: string
+  default: ''
+- name: surname
+  order: 1
+  type: string
+  default: ''
+- name: managerid
+  order: 2
+  type: int
+  range:
+    min: 1
+    max: 10000
+  default: 1
+- name: headid
+  order: 3
+  type: int
+  range:
+    min: 0
+    max: 300000
+  default: 0
+- name: height
+  order: 4
+  type: int
+  range:
+    min: 130
+    max: 215
+  default: 180
+- name: hashighqualityhead
+  order: 5
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: gender
+  order: 6
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: suitvariationid
+  order: 7
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 1
+- name: teamid
+  order: 8
+  type: int
+  range:
+    min: 1
+    max: 200000
+  default: 1
+- name: suittypeid
+  order: 9
+  type: int
+  range:
+    min: 0
+    max: 2
+  default: 0
+- name: eyecolorcode
+  order: 10
+  type: int
+  range:
+    min: 1
+    max: 16
+  default: 3
+- name: headclasscode
+  order: 11
+  type: int
+  range:
+    min: 0
+    max: 2
+  default: 1
+- name: skintonecode
+  order: 12
+  type: int
+  range:
+    min: 1
+    max: 11
+  default: 2
+- name: bodytypecode
+  order: 13
+  type: int
+  range:
+    min: 1
+    max: 128
+  default: 1

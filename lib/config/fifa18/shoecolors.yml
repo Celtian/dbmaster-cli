@@ -1,0 +1,28 @@
+- name: blue
+  order: 0
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: green
+  order: 1
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: red
+  order: 2
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: colorid
+  order: 3
+  type: int
+  range:
+    min: 0
+    max: 31
+  default: 0

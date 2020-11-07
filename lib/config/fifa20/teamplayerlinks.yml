@@ -1,0 +1,112 @@
+- name: leaguegoals
+  order: 0
+  type: int
+  range:
+    min: 0
+    max: 200
+  default: 0
+- name: isamongtopscorers
+  order: 1
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: yellows
+  order: 2
+  type: int
+  range:
+    min: 0
+    max: 40
+  default: 0
+- name: isamongtopscorersinteam
+  order: 3
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: jerseynumber
+  order: 4
+  type: int
+  range:
+    min: 1
+    max: 99
+  default: 1
+- name: position
+  order: 5
+  type: int
+  range:
+    min: 0
+    max: 33
+  default: 0
+- name: artificialkey
+  order: 6
+  type: int
+  range:
+    min: 0
+    max: 300000
+  default: 0
+- name: teamid
+  order: 7
+  type: int
+  range:
+    min: 1
+    max: 200000
+  default: 1
+- name: leaguegoalsprevmatch
+  order: 8
+  type: int
+  range:
+    min: 0
+    max: 10
+  default: 0
+- name: injury
+  order: 9
+  type: int
+  range:
+    min: 0
+    max: 35
+  default: 0
+- name: leagueappearances
+  order: 10
+  type: int
+  range:
+    min: 0
+    max: 50
+  default: 0
+- name: istopscorer
+  order: 11
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: leaguegoalsprevthreematches
+  order: 12
+  type: int
+  range:
+    min: 0
+    max: 25
+  default: 0
+- name: playerid
+  order: 13
+  type: int
+  range:
+    min: 0
+    max: 500000
+  default: 1
+- name: form
+  order: 14
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 3
+- name: reds
+  order: 15
+  type: int
+  range:
+    min: 0
+    max: 20
+  default: 0

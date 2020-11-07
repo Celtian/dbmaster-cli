@@ -1,0 +1,98 @@
+- name: manufacturerid
+  order: 0
+  type: int
+  range:
+    min: 1
+    max: 256
+  default: 3
+- name: issmallsided
+  order: 1
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: powid
+  order: 2
+  type: int
+  range:
+    min: -1
+    max: 32000
+  default: -1
+- name: islocked
+  order: 3
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: islegacy
+  order: 4
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: shoecolor1
+  order: 5
+  type: int
+  range:
+    min: 0
+    max: 31
+  default: 30
+- name: gender
+  order: 6
+  type: int
+  range:
+    min: 0
+    max: 2
+  default: 0
+- name: islicensed
+  order: 7
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: shoetype
+  order: 8
+  type: int
+  range:
+    min: 0
+    max: 1000
+  default: 0
+- name: isembargoed
+  order: 9
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: isavailableinstore
+  order: 10
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 1
+- name: isadidas
+  order: 11
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: shoedesign
+  order: 12
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 0
+- name: shoecolor2
+  order: 13
+  type: int
+  range:
+    min: 0
+    max: 31
+  default: 31

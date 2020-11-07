@@ -1,0 +1,14 @@
+- name: leagueid
+  order: 0
+  type: int
+  range:
+    min: 1
+    max: 4000
+  default: 1
+- name: refereeid
+  order: 1
+  type: int
+  range:
+    min: 1
+    max: 500000
+  default: 1
