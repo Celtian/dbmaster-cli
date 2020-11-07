@@ -11,6 +11,8 @@
     "build": "tsc",
     "local": "npm i -g && dbmaster",
     "gpr:setup": "ts-node --project scripts/tsconfig.ts-node.json scripts/gpr-setup",
+    "copydist": "ts-node --project scripts/tsconfig.ts-node.json scripts/copy-dist",
+    "version": "yarn copydist",
     "postversion": "git push && git push --follow-tags",
     "release:patch": "git checkout master && npm version patch -m \"chore(update): patch release %s 🐛 \"",
     "release:minor": "git checkout master && npm version minor -m \"chore(update): release %s 🚀\"",
@@ -35,7 +37,10 @@
   },
   "homepage": "https://github.com/Celtian/dbmaster-cli",
   "engines": {
-    "node": ">= 10"
+    "node": ">= 12"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
     "byline": "^5.0.0",
