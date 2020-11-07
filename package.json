@@ -1,5 +1,5 @@
 {
-  "name": "db-master-converter",
+  "name": "dbmaster-cli",
   "version": "0.0.2",
   "description": "Tool for converting tables between Fifa Soccer Games",
   "bin": {
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Celtian/db-master-converter.git"
+    "url": "git+https://github.com/Celtian/dbmaster-cli.git"
   },
   "keywords": [
     "fifa",
@@ -31,9 +31,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Celtian/db-master-converter/issues"
+    "url": "https://github.com/Celtian/dbmaster-cli/issues"
   },
-  "homepage": "https://github.com/Celtian/db-master-converter#readme",
+  "homepage": "https://github.com/Celtian/dbmaster-cli#readme",
   "engines": {
     "node": ">= 10"
   },
