@@ -1,6 +1,6 @@
 {
   "name": "db-master-converter",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Tool for converting tables between Fifa Soccer Games",
   "bin": {
     "dbmaster": "dist/bin/dbmaster.js"
