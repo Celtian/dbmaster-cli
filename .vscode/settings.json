@@ -1,7 +1,7 @@
 {
   "workbench.colorCustomizations": {
-    "statusBar.background": "#1eff00",
-    "statusBar.foreground": "#6e0000"
+    "statusBar.background": "#000080",
+    "statusBar.foreground": "#ffffff"
   },
   "editor.codeActionsOnSave": {
     "source.organizeImports": true,
