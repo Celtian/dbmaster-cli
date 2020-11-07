@@ -1,6 +1,6 @@
 {
   "name": "dbmaster-cli",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Tool for converting tables between Fifa Soccer Games",
   "bin": {
     "dbmaster": "dist/bin/dbmaster.js"
