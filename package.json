@@ -3,7 +3,7 @@
   "version": "0.0.6",
   "description": "Tool for converting tables between Fifa Soccer Games",
   "bin": {
-    "dbmaster": "dist/bin/dbmaster.js"
+    "dbmaster": "bin/dbmaster.js"
   },
   "scripts": {
     "start": "ts-node bin/dbmaster.ts",

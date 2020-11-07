@@ -1,7 +1,6 @@
 import { copyFileSync } from 'fs';
 
-// Copy README into dist folder
-const copyFiles = ['README.md'];
+const copyFiles = ['README.md', 'LICENSE'];
 for (const file of copyFiles) {
   copyFileSync(`./${file}`, `./dist/${file}`);
 }
