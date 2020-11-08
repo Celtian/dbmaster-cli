@@ -9,6 +9,7 @@
     "start": "ts-node bin/dbmaster.ts",
     "start:watch": "tsc-watch --project tsconfig.json --onSuccess \"yarn start\"",
     "build": "tsc",
+    "person": "ts-node --project scripts/tsconfig.ts-node.json scripts/person",
     "copydist": "ts-node --project scripts/tsconfig.ts-node.json scripts/copy-dist",
     "postbuild": "yarn copydist",
     "local": "npm i -g && dbmaster",

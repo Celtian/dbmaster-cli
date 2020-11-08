@@ -12,8 +12,8 @@ export class CompareManager {
   private configSecond: Config;
 
   constructor(private fifaFirst: Fifa, private fifaSecond: Fifa) {
-    this.configFirst = configFactory(fifaFirst);
-    this.configSecond = configFactory(fifaSecond);
+    this.configFirst = configFactory(this.fifaFirst);
+    this.configSecond = configFactory(this.fifaSecond);
   }
 
   public compareTableDefinition(table: Table): CompareManagerTableDefinition {

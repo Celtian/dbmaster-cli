@@ -1,7 +1,7 @@
 import { LineStream } from 'byline';
 import { createReadStream, createWriteStream, mkdirSync } from 'fs';
 import { decodeStream } from 'iconv-lite';
-import path, { join } from 'path';
+import { dirname, join } from 'path';
 import { Stream } from 'stream';
 import { Config, configFactory } from '../config';
 import { Field, Fifa, Table } from '../interfaces';
@@ -16,50 +16,6 @@ export class ConvertManager {
     this.configTo = configFactory(convertTo);
   }
 
-  /*
-  public readFromStream(stream: Stream, table: Table): Promise<any[]> {
-    const fields: Field[] = this.configFrom[table];
-    const list: any[] = [];
-    return new Promise(async (resolve, reject) =>
-      stream
-        .pipe(decodeStream('utf16le'))
-        .pipe(new LineStream({ keepEmptyLines: false }))
-        .pipe(new Csv2JsonTransform({ skip: 1, fields }))
-        .on('data', (buffer: Buffer) => {
-          list.push(JSON.parse(buffer.toString()));
-        })
-        .on('finish', () => {
-          resolve(list);
-        })
-        .on('error', () => {
-          reject(list);
-        })
-    );
-  }
-
-  public readAndTransformStream(stream: Stream, table: Table): Promise<any[]> {
-    const fromfields: Field[] = this.configFrom[table];
-    const tofields: Field[] = this.configTo[table];
-    const list: any[] = [];
-    return new Promise(async (resolve, reject) =>
-      stream
-        .pipe(decodeStream('utf16le'))
-        .pipe(new LineStream({ keepEmptyLines: false }))
-        .pipe(new Csv2JsonTransform({ skip: 1, fields: fromfields }))
-        .pipe(new AppendDefaultTransform({ fields: tofields }))
-        .on('data', (buffer: Buffer) => {
-          list.push(JSON.parse(buffer.toString()));
-        })
-        .on('finish', () => {
-          resolve(list);
-        })
-        .on('error', () => {
-          reject(list);
-        })
-    );
-  }
-  */
-
   public async convertTable(table: Table, inputFolder: string, outputFolder: string): Promise<any[]> {
     const inputFile = join(inputFolder, `${table}.txt`);
     const outputFile = join(outputFolder, `${table}.txt`);
@@ -72,7 +28,7 @@ export class ConvertManager {
     const tofields: Field[] = this.configTo[table];
     const list: any[] = [];
 
-    mkdirSync(path.dirname(output), { recursive: true });
+    mkdirSync(dirname(output), { recursive: true });
 
     const writeStream = createWriteStream(output, { encoding: 'utf16le' });
 
