@@ -20,7 +20,7 @@ class BodyGeneratorConfig {
   public minHeight = 130;
   public maxHeight = 215;
   public minWeight = 30;
-  public maxWeight = 50;
+  public maxWeight = 115;
   public specificBodyType = false;
 }
 
@@ -43,6 +43,10 @@ const bodyGeneratorConfigFactory = (opts: BodyGeneratorOptions): BodyGeneratorCo
     config.maxWeight = opts.maxWeight;
   }
 
+  if (opts.specificBodyType) {
+    config.specificBodyType = opts.specificBodyType;
+  }
+
   return config;
 };
 
@@ -54,7 +58,7 @@ export class BodyGenerator {
     this.config = bodyGeneratorConfigFactory(opts);
   }
 
-  public generateHeight(weight?: number): number {
+  public height(weight?: number): number {
     if (this.isWeightValid(weight)) {
       const avg = weight + 100;
       const min = avg - 10 >= this.config.minHeight ? avg - 10 : this.config.minHeight;
@@ -64,7 +68,7 @@ export class BodyGenerator {
     return random.number({ min: this.config.minHeight, max: this.config.maxHeight });
   }
 
-  public generateWidth(height?: number): number {
+  public weight(height?: number): number {
     if (this.isHeightValid(height)) {
       const avg = height - 100;
       const min = avg - 10 >= this.config.minWeight ? avg - 10 : this.config.minWeight;
