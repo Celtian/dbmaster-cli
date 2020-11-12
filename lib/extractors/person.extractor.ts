@@ -10,7 +10,7 @@ import {
   PersonAttribute,
   Table
 } from '../interfaces';
-import { ReadManager } from '../managers/read-manager';
+import { StreamBuilder } from '../utils';
 
 type FilterByGenderFn = (person: Person) => boolean;
 type FilterByHeadClassFn = (person: Person) => boolean;
@@ -19,25 +19,22 @@ type PersonAttributesByGender = { [key: string]: AttributeByGender };
 
 export class PersonExtractor {
   private config: Config;
-  private readManager: ReadManager;
 
   constructor(targetFifa: Fifa) {
     this.config = configFactory(targetFifa);
-    this.readManager = new ReadManager(this.config);
   }
 
   public async getAttributes(inputFolder: string): Promise<PersonAttributesByGender> {
     const players = await this.readTable(inputFolder, Table.Players);
     const referees = await this.readTable(inputFolder, Table.Referee);
 
-    let obj: PersonAttributesByGender = {};
-    for (const attr of Object.values(PersonAttribute)) {
-      obj = {
-        ...obj,
+    return Object.values(PersonAttribute).reduce(
+      (acc, attr) => ({
+        ...acc,
         [attr]: this.getGroupedAttribute(players, referees, attr)
-      };
-    }
-    return obj;
+      }),
+      {}
+    );
   }
 
   public async getAttribute(inputFolder: string, attribute: PersonAttribute): Promise<AttributeByGender> {
@@ -83,7 +80,13 @@ export class PersonExtractor {
   }
 
   private async readTable(inputFolder: string, table: Table): Promise<Person[]> {
-    return await this.readManager.readTable(inputFolder, table);
+    const list: Person[] = [];
+    return new Promise(async (resolve, reject) =>
+      new StreamBuilder(inputFolder, table, this.config[table])
+        .onData((buffer: Buffer) => list.push(JSON.parse(buffer.toString())))
+        .onFinish(() => resolve(list))
+        .onError(() => reject(list))
+    );
   }
 
   private filterByHeadClassFn(headClassCode: HeadClassCode): FilterByHeadClassFn {

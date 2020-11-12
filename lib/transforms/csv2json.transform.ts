@@ -1,13 +1,11 @@
 import { Transform, TransformCallback, TransformOptions } from 'stream';
-import { Datatype, Field } from '../interfaces';
+import { Datatype, Field, RawData } from '../interfaces';
 
 export interface Csv2JsonTransformOptions extends TransformOptions {
-  skip?: number;
   fields: Field[];
 }
 
 export class Csv2JsonTransform extends Transform {
-  private line = 0;
   private opts: Csv2JsonTransformOptions;
 
   constructor(opts?: Csv2JsonTransformOptions) {
@@ -16,37 +14,31 @@ export class Csv2JsonTransform extends Transform {
   }
 
   public _transform(chunk: Buffer, encoding: string, callback: TransformCallback): void {
-    if (this.opts.skip && this.line < this.opts.skip) {
-      this.line++;
-      callback();
-      return;
-    }
     const cols = chunk.toString().split(/\t/);
     const { length } = cols;
 
     if (length === this.opts.fields.length) {
-      const json: any = new Object();
-      for (const field of this.opts.fields.sort((a, b) => a.order - b.order)) {
-        switch (field.type) {
-          case Datatype.Int:
-            json[field.name] = Number(cols[field.order]);
-            break;
-          case Datatype.Float:
-            json[field.name] = Number(cols[field.order].replace(',', '.'));
-            break;
-          default:
-            json[field.name] = cols[field.order];
-            break;
-        }
-      }
-      this.push(JSON.stringify(json));
+      const object: RawData = this.opts.fields
+        .sort((a, b) => a.order - b.order)
+        .reduce((acc, field) => ({ ...acc, [field.name]: this.formatFn(field, cols[field.order]) }), {});
+
+      this.push(JSON.stringify(object));
     }
-    this.line++;
     callback();
   }
 
   public _flush(callback: TransformCallback): void {
-    this.line = 0;
     callback();
+  }
+
+  private formatFn(field: Field, value: string): string | number {
+    switch (field.type) {
+      case Datatype.Int:
+        return Number(value);
+      case Datatype.Float:
+        return Number(value.replace(',', '.'));
+      default:
+        return value;
+    }
   }
 }

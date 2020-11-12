@@ -53,3 +53,5 @@ export interface Field {
 }
 
 export type KeyValueFrequency = { [key: string]: string };
+
+export type RawData = { [key: string]: string | number };

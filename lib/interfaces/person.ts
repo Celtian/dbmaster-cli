@@ -185,3 +185,9 @@ export interface AttributeByGender {
 }
 
 export type AttributeGender = 'man' | 'woman';
+
+export enum PersonRole {
+  Player = 'player',
+  Referee = 'referee',
+  Manager = 'manager'
+}

@@ -1,252 +1,259 @@
-- name: homega
+- name: shortsnumberplacementcode
   order: 0
   type: int
   range:
     min: 0
-    max: 200
+    max: 255
   default: 0
-- name: previousyeartableposition
+- name: teamcolorsecb
   order: 1
   type: int
   range:
-    min: 1
-    max: 256
-  default: 1
-- name: homegf
+    min: 0
+    max: 255
+  default: 0
+- name: shortsrenderingdetailmaptype
   order: 2
   type: int
   range:
     min: 0
-    max: 200
+    max: 255
   default: 0
-- name: currenttableposition
+- name: jerseyfrontnumberplacementcode
   order: 3
   type: int
   range:
-    min: 1
-    max: 256
-  default: 1
-- name: awaygf
+    min: 0
+    max: 255
+  default: 0
+- name: teamcolorprimg
   order: 4
   type: int
   range:
     min: 0
-    max: 200
+    max: 255
   default: 0
-- name: awayga
+- name: numberfonttype
   order: 5
   type: int
   range:
     min: 0
-    max: 200
+    max: 255
   default: 0
-- name: teamshortform
+- name: teamcolortertb
   order: 6
   type: int
   range:
     min: 0
-    max: 100
-  default: 50
-- name: hasachievedobjective
+    max: 255
+  default: 0
+- name: jerseynamefonttype
   order: 7
   type: int
   range:
     min: 0
-    max: 1
+    max: 255
   default: 0
-- name: secondarytable
+- name: jerseynamelayouttype
   order: 8
   type: int
   range:
     min: 0
-    max: 1
+    max: 255
   default: 0
-- name: yettowin
+- name: shortsnumbercolor
   order: 9
   type: int
   range:
     min: 0
-    max: 1
+    max: 255
   default: 0
-- name: unbeatenallcomps
+- name: jerseyshapestyle
   order: 10
   type: int
   range:
     min: 0
-    max: 1
+    max: 255
   default: 0
-- name: unbeatenleague
+- name: jerseybacknameplacementcode
   order: 11
   type: int
   range:
     min: 0
-    max: 1
+    max: 255
   default: 0
-- name: champion
+- name: teamcolorprimr
   order: 12
   type: int
   range:
     min: 0
-    max: 1
+    max: 255
   default: 0
-- name: leagueid
+- name: jerseynamecolorg
   order: 13
   type: int
   range:
-    min: 1
-    max: 3000
-  default: 1
-- name: prevleagueid
+    min: 0
+    max: 255
+  default: 0
+- name: teamcolorsecg
   order: 14
   type: int
   range:
-    min: 1
-    max: 3000
-  default: 1
-- name: highestpossible
+    min: 0
+    max: 255
+  default: 0
+- name: teamcolortertr
   order: 15
   type: int
   range:
     min: 0
-    max: 20
+    max: 255
   default: 0
-- name: teamform
+- name: renderingmaterialtype
   order: 16
   type: int
   range:
     min: 0
-    max: 22222
+    max: 255
   default: 0
-- name: highestprobable
+- name: teamcolorsecr
   order: 17
   type: int
   range:
     min: 0
-    max: 20
+    max: 255
   default: 0
-- name: homewins
+- name: jerseycollargeometrytype
   order: 18
   type: int
   range:
     min: 0
-    max: 25
+    max: 255
   default: 0
-- name: artificialkey
+- name: jerseynamecolorr
   order: 19
   type: int
   range:
     min: 0
-    max: 3000
+    max: 255
   default: 0
-- name: nummatchesplayed
+- name: numbercolor
   order: 20
   type: int
   range:
     min: 0
-    max: 50
-  default: 0
-- name: teamid
+    max: 255
+  default: 1
+- name: teamcolorprimb
   order: 21
   type: int
   range:
-    min: 1
-    max: 200000
-  default: 1
-- name: gapresult
+    min: 0
+    max: 255
+  default: 0
+- name: jerseyrenderingdetailmaptype
   order: 22
   type: int
   range:
     min: 0
-    max: 5
+    max: 255
   default: 0
-- name: grouping
+- name: shortsnumberfonttype
   order: 23
   type: int
   range:
     min: 0
-    max: 20
-  default: 0
-- name: awaywins
+    max: 255
+  default: 16
+- name: jerseynamecolorb
   order: 24
   type: int
   range:
     min: 0
-    max: 25
+    max: 255
   default: 0
-- name: objective
+- name: teamcolortertg
   order: 25
   type: int
   range:
     min: 0
-    max: 20
+    max: 255
   default: 0
-- name: points
+- name: jerseybacknamefontcase
   order: 26
   type: int
   range:
     min: 0
-    max: 4095
+    max: 2
   default: 0
-- name: actualvsexpectations
+- name: teamkittypetechid
   order: 27
   type: int
   range:
     min: 0
-    max: 4
+    max: 255
   default: 0
-- name: homelosses
+- name: powid
   order: 28
   type: int
   range:
-    min: 0
-    max: 25
-  default: 0
-- name: unbeatenhome
+    min: -1
+    max: 32000
+  default: -1
+- name: isinheritbasedetailmap
   order: 29
   type: int
   range:
     min: 0
     max: 1
   default: 0
-- name: lastgameresult
+- name: islocked
   order: 30
-  type: int
-  range:
-    min: -1
-    max: 2
-  default: 0
-- name: unbeatenaway
-  order: 31
   type: int
   range:
     min: 0
     max: 1
   default: 0
-- name: awaylosses
+- name: teamkitid
+  order: 31
+  type: int
+  range:
+    min: 0
+    max: 16383
+  default: 0
+- name: year
   order: 32
   type: int
   range:
     min: 0
-    max: 25
+    max: 2027
   default: 0
-- name: awaydraws
+- name: teamtechid
   order: 33
   type: int
   range:
     min: 0
-    max: 25
-  default: 0
-- name: homedraws
+    max: 200000
+  default: 1
+- name: hasadvertisingkit
   order: 34
   type: int
   range:
     min: 0
-    max: 25
+    max: 1
   default: 0
-- name: teamlongform
+- name: dlc
   order: 35
   type: int
   range:
     min: 0
-    max: 100
-  default: 50
+    max: 1
+  default: 0
+- name: jerseyfit
+  order: 36
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0

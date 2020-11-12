@@ -1,0 +1,21 @@
+- name: rivaltype
+  order: 0
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: teamid2
+  order: 1
+  type: int
+  range:
+    min: 1
+    max: 200000
+  default: 1
+- name: teamid1
+  order: 2
+  type: int
+  range:
+    min: 1
+    max: 200000
+  default: 1

@@ -1,7 +1,7 @@
 import chalk from 'chalk';
 import { Input } from '../commands';
+import { CompareManager } from '../lib/handlers';
 import { Fifa, Table } from '../lib/interfaces';
-import { CompareManager } from '../lib/managers';
 import { AbstractAction } from './abstract.action';
 
 export class CompareAction extends AbstractAction {

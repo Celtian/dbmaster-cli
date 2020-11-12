@@ -1,7 +1,7 @@
 import chalk from 'chalk';
 import { Input } from '../commands';
+import { MultiTableHandler } from '../lib/handlers';
 import { Fifa, Table } from '../lib/interfaces';
-import { ConvertManager } from '../lib/managers';
 import { AbstractAction } from './abstract.action';
 
 export class ConvertAction extends AbstractAction {
@@ -11,7 +11,7 @@ export class ConvertAction extends AbstractAction {
     const input = options.find((option) => option.name === 'input');
     const output = options.find((option) => option.name === 'output');
 
-    const converter = new ConvertManager(from.value as Fifa, to.value as Fifa);
+    const converter = new MultiTableHandler(from.value as Fifa, to.value as Fifa);
     for (const table of Object.values(Table)) {
       console.info(chalk.green(`[${table}]`));
       const list = await converter.convertTable(table, input.value as string, output.value as string);

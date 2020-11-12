@@ -6,6 +6,7 @@
     "dbmaster": "bin/dbmaster.js"
   },
   "scripts": {
+    "demo": "ts-node demo",
     "start": "ts-node bin/dbmaster.ts",
     "start:watch": "tsc-watch --project tsconfig.json --onSuccess \"yarn start\"",
     "build": "tsc",
@@ -48,6 +49,7 @@
     "chalk": "^4.1.0",
     "clear": "^0.1.0",
     "commander": "^6.2.0",
+    "faker": "^5.1.0",
     "figlet": "^1.5.0",
     "iconv-lite": "^0.6.2",
     "joi": "^17.3.0",
@@ -57,6 +59,7 @@
   "devDependencies": {
     "@types/byline": "^4.2.32",
     "@types/clear": "^0.1.0",
+    "@types/faker": "^5.1.4",
     "@types/figlet": "^1.2.1",
     "@types/joi": "^14.3.4",
     "@types/js-yaml": "^3.12.5",

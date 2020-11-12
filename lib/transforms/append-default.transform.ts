@@ -1,5 +1,6 @@
 import { Transform, TransformCallback, TransformOptions } from 'stream';
-import { Datatype, Field } from '../interfaces';
+import { Field, RawData } from '../interfaces';
+import { ValidationBuilder } from '../utils';
 
 export interface AppentDefaultTransformOptions extends TransformOptions {
   fields: Field[];
@@ -7,33 +8,24 @@ export interface AppentDefaultTransformOptions extends TransformOptions {
 
 export class AppendDefaultTransform extends Transform {
   private opts: AppentDefaultTransformOptions;
+  private vb: ValidationBuilder;
 
   constructor(opts?: AppentDefaultTransformOptions) {
     super(opts);
     this.opts = opts;
+    this.vb = new ValidationBuilder(this.opts.fields);
   }
 
   public _transform(chunk: Buffer, encoding: string, callback: TransformCallback): void {
-    const oldObject = JSON.parse(chunk.toString());
-    const newObject: any = new Object();
-    for (const toField of this.opts.fields) {
-      let oldValue = oldObject[toField.name];
-      if (!!oldValue) {
-        if (toField.type === Datatype.Int) {
-          oldValue = Number(oldObject[toField.name]);
-          if (oldValue >= toField.range.min && oldValue <= toField.range.max) {
-            newObject[toField.name] = oldValue;
-          } else {
-            newObject[toField.name] = toField.default;
-          }
-        } else {
-          newObject[toField.name] = oldValue;
-        }
-      } else {
-        newObject[toField.name] = toField.default;
+    const object: RawData = JSON.parse(chunk.toString());
+    for (const field of this.opts.fields) {
+      const value = object[field.name];
+      const { error } = this.vb.validationFn(field).validate(value);
+      if (error) {
+        object[field.name] = field.default;
       }
     }
-    this.push(JSON.stringify(newObject));
+    this.push(JSON.stringify(object));
     callback();
   }
 
