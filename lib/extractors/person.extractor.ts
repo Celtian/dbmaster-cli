@@ -1,3 +1,4 @@
+import { StreamBuilder } from '../actions';
 import { FifaConfig, fifaConfigFactory } from '../fifa-config';
 import {
   AttributeByGender,
@@ -10,7 +11,6 @@ import {
   PersonAttribute,
   Table
 } from '../interfaces';
-import { StreamBuilder } from '../utils';
 
 type FilterByGenderFn = (person: Person) => boolean;
 type FilterByHeadClassFn = (person: Person) => boolean;
