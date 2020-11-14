@@ -1,7 +1,7 @@
 import * as Joi from 'joi';
 import { Transform, TransformCallback, TransformOptions } from 'stream';
+import { ValidationBuilder } from '../fifa-config';
 import { Field, RawData } from '../interfaces';
-import { ValidationBuilder } from '../utils';
 
 export interface ValidateTransformOptions extends TransformOptions {
   fields: Field[];
@@ -19,7 +19,10 @@ export class ValidateTransform extends Transform {
 
   public _transform(chunk: Buffer, encoding: string, callback: TransformCallback): void {
     const data: RawData = JSON.parse(chunk.toString());
-    this.push(JSON.stringify(this.schema.validate(data)));
+    const validated = this.schema.validate(data);
+    if (validated.error || validated.errors || validated.warning) {
+      this.push(JSON.stringify(validated));
+    }
     callback();
   }
 

@@ -32,16 +32,41 @@ _Go to command line and type_
 This example converts supported table from Fifa 20 into Fifa 16 format. If some value of field is out of range or is missing it is filled by default value.
 
 ```terminal
-dbmaster convert --from fifa20 --to fifa16 --input 'C:\Users\username\Desktop\fifa20' --output 'C:\Users\username\Desktop\fifa16'
+dbmaster convert --config 'C:\Users\username\Desktop\config.yml'
+```
+
+Example of yaml file:
+
+```yaml
+input:
+  version: fifa20
+  folder: 'C:\Users\username\Desktop\fifa20' # folder containing tables exported by db master
+
+actions: # actions will be called in this order
+  - type: extend-contract # extend loans and contracts which are invalid
+  - type: append-default # appends default values to new fields
+
+output:
+  version: fifa16
+  folder: 'C:\Users\username\Desktop\fifa16'
+  format: csv # csv or json
 ```
 
 ### Compare
 
-This example shows you which columns in tables are different.
+This example shows you comaprsion table.
 
 ```terminal
-dbmaster compare --from fifa20 --to fifa16
+dbmaster compare --from fifa20 --to fifa16 --table players --mode columns
 ```
+
+- [from](#supported-versions-of-fifa-soccer)
+- [to](#supported-versions-of-fifa-soccer)
+- [table](#supported-tables)
+- mode
+  - columns - show you if column is present or not
+  - defaults - show you default values used by algorithms
+  - range - range of integer value, specially used by validation functions
 
 ## Supported versions of Fifa Soccer
 
@@ -51,7 +76,7 @@ dbmaster compare --from fifa20 --to fifa16
 | **Fifa 12** | ✗         |
 | **Fifa 13** | ✗         |
 | **Fifa 14** | ✗         |
-| **Fifa 15** | ✗         |
+| **Fifa 15** | ✓         |
 | **Fifa 16** | ✓         |
 | **Fifa 17** | ✓         |
 | **Fifa 18** | ✓         |

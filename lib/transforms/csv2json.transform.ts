@@ -1,5 +1,6 @@
 import { Transform, TransformCallback, TransformOptions } from 'stream';
 import { Datatype, Field, RawData } from '../interfaces';
+import { sortByOrder } from '../utils';
 
 export interface Csv2JsonTransformOptions extends TransformOptions {
   fields: Field[];
@@ -19,7 +20,7 @@ export class Csv2JsonTransform extends Transform {
 
     if (length === this.opts.fields.length) {
       const object: RawData = this.opts.fields
-        .sort((a, b) => a.order - b.order)
+        .sort(sortByOrder)
         .reduce((acc, field) => ({ ...acc, [field.name]: this.formatFn(field, cols[field.order]) }), {});
 
       this.push(JSON.stringify(object));

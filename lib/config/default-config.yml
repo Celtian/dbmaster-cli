@@ -1,0 +1,14 @@
+input:
+  version: fifa15
+  folder: 'examples/fifa15'
+
+actions:
+  - type: validate
+  # - type: filter
+  # - type: extend-contract
+  # - type: append-default
+
+output:
+  version: fifa15
+  folder: 'output'
+  format: json

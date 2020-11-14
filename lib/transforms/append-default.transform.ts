@@ -1,6 +1,6 @@
 import { Transform, TransformCallback, TransformOptions } from 'stream';
+import { ValidationBuilder } from '../fifa-config';
 import { Field, RawData } from '../interfaces';
-import { ValidationBuilder } from '../utils';
 
 export interface AppentDefaultTransformOptions extends TransformOptions {
   fields: Field[];

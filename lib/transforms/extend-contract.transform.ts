@@ -1,7 +1,7 @@
 import { Transform, TransformCallback, TransformOptions } from 'stream';
+import { ValidationBuilder } from '../fifa-config';
 import { DateGenerator } from '../generators';
 import { Field, RawData } from '../interfaces';
-import { ValidationBuilder } from '../utils';
 
 export interface ExtendContractTransformOptions extends TransformOptions {
   fields: Field[];

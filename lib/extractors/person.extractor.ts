@@ -1,4 +1,4 @@
-import { Config, configFactory } from '../config';
+import { FifaConfig, fifaConfigFactory } from '../fifa-config';
 import {
   AttributeByGender,
   AttributeGender,
@@ -18,10 +18,10 @@ type ReduceFn = (acc: KeyValueFrequency, cur: Person) => {};
 type PersonAttributesByGender = { [key: string]: AttributeByGender };
 
 export class PersonExtractor {
-  private config: Config;
+  private config: FifaConfig;
 
   constructor(targetFifa: Fifa) {
-    this.config = configFactory(targetFifa);
+    this.config = fifaConfigFactory(targetFifa);
   }
 
   public async getAttributes(inputFolder: string): Promise<PersonAttributesByGender> {

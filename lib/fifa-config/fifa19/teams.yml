@@ -1,0 +1,662 @@
+- name: assetid
+  order: 0
+  type: int
+  range:
+    min: -2147483648
+    max: 2147483647
+  default: 1
+- name: balltype
+  order: 1
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: teamcolor1g
+  order: 2
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: teamcolor1r
+  order: 3
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: clubworth
+  order: 4
+  type: int
+  range:
+    min: 0
+    max: 9999999
+  default: 5000
+- name: teamcolor2b
+  order: 5
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: teamcolor2r
+  order: 6
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: foundationyear
+  order: 7
+  type: int
+  range:
+    min: 1800
+    max: 2050
+  default: 1950
+- name: teamcolor3r
+  order: 8
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: teamcolor1b
+  order: 9
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: opponentweakthreshold
+  order: 10
+  type: int
+  range:
+    min: -100
+    max: 100
+  default: 1
+- name: latitude
+  order: 11
+  type: int
+  range:
+    min: -90
+    max: 90
+  default: 0
+- name: teamcolor3g
+  order: 12
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: opponentstrongthreshold
+  order: 13
+  type: int
+  range:
+    min: -100
+    max: 100
+  default: 2
+- name: teamcolor2g
+  order: 14
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: teamname
+  order: 15
+  type: string
+  default: ''
+- name: teamcolor3b
+  order: 16
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: defmentality
+  order: 17
+  type: int
+  range:
+    min: 1
+    max: 100
+  default: 50
+- name: powid
+  order: 18
+  type: int
+  range:
+    min: -1
+    max: 32000
+  default: -1
+- name: defensivestyle
+  order: 19
+  type: int
+  range:
+    min: 0
+    max: 4
+  default: 1
+- name: rightfreekicktakerid
+  order: 20
+  type: int
+  range:
+    min: -1
+    max: 500000
+  default: 1
+- name: flamethrowercannon
+  order: 21
+  type: int
+  range:
+    min: 0
+    max: 4
+  default: 4
+- name: domesticprestige
+  order: 22
+  type: int
+  range:
+    min: 0
+    max: 20
+  default: 10
+- name: genericint2
+  order: 23
+  type: int
+  range:
+    min: -1
+    max: 100
+  default: -1
+- name: defensivedepth
+  order: 24
+  type: int
+  range:
+    min: 0
+    max: 9
+  default: 4
+- name: hasvikingclap
+  order: 25
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: jerseytype
+  order: 26
+  type: int
+  range:
+    min: 0
+    max: 2
+  default: 2
+- name: popularity
+  order: 27
+  type: int
+  range:
+    min: 0
+    max: 10
+  default: 0
+- name: hastifo
+  order: 28
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: teamstadiumcapacity
+  order: 29
+  type: int
+  range:
+    min: 0
+    max: 999999
+  default: 5000
+- name: iscompetitionscarfenabled
+  order: 30
+  type: int
+  range:
+    min: 0
+    max: 2
+  default: 0
+- name: cityid
+  order: 31
+  type: int
+  range:
+    min: 0
+    max: 1023
+  default: 0
+- name: defensivewidth
+  order: 32
+  type: int
+  range:
+    min: 0
+    max: 9
+  default: 4
+- name: rivalteam
+  order: 33
+  type: int
+  range:
+    min: 1
+    max: 200000
+  default: 1
+- name: isbannerenabled
+  order: 34
+  type: int
+  range:
+    min: 0
+    max: 2
+  default: 1
+- name: midfieldrating
+  order: 35
+  type: int
+  range:
+    min: 0
+    max: 99
+  default: 50
+- name: matchdayoverallrating
+  order: 36
+  type: int
+  range:
+    min: 0
+    max: 99
+  default: 50
+- name: matchdaymidfieldrating
+  order: 37
+  type: int
+  range:
+    min: 0
+    max: 99
+  default: 50
+- name: attackrating
+  order: 38
+  type: int
+  range:
+    min: 0
+    max: 99
+  default: 50
+- name: playersinboxcorner
+  order: 39
+  type: int
+  range:
+    min: 0
+    max: 4
+  default: 2
+- name: longitude
+  order: 40
+  type: int
+  range:
+    min: -180
+    max: 180
+  default: 0
+- name: buspassing
+  order: 41
+  type: int
+  range:
+    min: 1
+    max: 100
+  default: 50
+- name: matchdaydefenserating
+  order: 42
+  type: int
+  range:
+    min: 0
+    max: 99
+  default: 50
+- name: defenserating
+  order: 43
+  type: int
+  range:
+    min: 0
+    max: 99
+  default: 50
+- name: iscompetitionpoleflagenabled
+  order: 44
+  type: int
+  range:
+    min: 0
+    max: 2
+  default: 0
+- name: skinnyflags
+  order: 45
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: defteamwidth
+  order: 46
+  type: int
+  range:
+    min: 1
+    max: 100
+  default: 50
+- name: longkicktakerid
+  order: 47
+  type: int
+  range:
+    min: -1
+    max: 500000
+  default: 1
+- name: bodytypeid
+  order: 48
+  type: int
+  range:
+    min: 0
+    max: 2
+  default: 1
+- name: trait1vweak
+  order: 49
+  type: int
+  range:
+    min: 0
+    max: 2097151
+  default: 0
+- name: busdribbling
+  order: 50
+  type: int
+  range:
+    min: 1
+    max: 100
+  default: 50
+- name: rightcornerkicktakerid
+  order: 51
+  type: int
+  range:
+    min: -1
+    max: 500000
+  default: 1
+- name: suitvariationid
+  order: 52
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 1
+- name: uefa_cl_wins
+  order: 53
+  type: int
+  range:
+    min: 0
+    max: 256
+  default: 0
+- name: domesticcups
+  order: 54
+  type: int
+  range:
+    min: 0
+    max: 1023
+  default: 0
+- name: defaggression
+  order: 55
+  type: int
+  range:
+    min: 1
+    max: 100
+  default: 50
+- name: ethnicity
+  order: 56
+  type: int
+  range:
+    min: 1
+    max: 11
+  default: 2
+- name: leftcornerkicktakerid
+  order: 57
+  type: int
+  range:
+    min: -1
+    max: 500000
+  default: 1
+- name: youthdevelopment
+  order: 58
+  type: int
+  range:
+    min: 0
+    max: 10
+  default: 3
+- name: teamid
+  order: 59
+  type: int
+  range:
+    min: 1
+    max: 200000
+  default: 1
+- name: uefa_el_wins
+  order: 60
+  type: int
+  range:
+    min: 0
+    max: 256
+  default: 0
+- name: trait1vequal
+  order: 61
+  type: int
+  range:
+    min: 0
+    max: 2097151
+  default: 0
+- name: suittypeid
+  order: 62
+  type: int
+  range:
+    min: 0
+    max: 2
+  default: 0
+- name: numtransfersin
+  order: 63
+  type: int
+  range:
+    min: 0
+    max: 31
+  default: 0
+- name: playersinboxfk
+  order: 64
+  type: int
+  range:
+    min: 0
+    max: 4
+  default: 2
+- name: stanchionflamethrower
+  order: 65
+  type: int
+  range:
+    min: 0
+    max: 2
+  default: 0
+- name: captainid
+  order: 66
+  type: int
+  range:
+    min: -1
+    max: 500000
+  default: 1
+- name: offensivestyle
+  order: 67
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 1
+- name: personalityid
+  order: 68
+  type: int
+  range:
+    min: 0
+    max: 2
+  default: 1
+- name: playersinboxcross
+  order: 69
+  type: int
+  range:
+    min: 0
+    max: 9
+  default: 2
+- name: prev_el_champ
+  order: 70
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: leftfreekicktakerid
+  order: 71
+  type: int
+  range:
+    min: -1
+    max: 500000
+  default: 1
+- name: leaguetitles
+  order: 72
+  type: int
+  range:
+    min: 0
+    max: 1023
+  default: 0
+- name: genericbanner
+  order: 73
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: buspositioning
+  order: 74
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: ccpositioning
+  order: 75
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: busbuildupspeed
+  order: 76
+  type: int
+  range:
+    min: 1
+    max: 100
+  default: 50
+- name: transferbudget
+  order: 77
+  type: int
+  range:
+    min: 0
+    max: 500000000
+  default: 500000
+- name: ccshooting
+  order: 78
+  type: int
+  range:
+    min: 1
+    max: 100
+  default: 50
+- name: overallrating
+  order: 79
+  type: int
+  range:
+    min: 0
+    max: 99
+  default: 50
+- name: offensivewidth
+  order: 80
+  type: int
+  range:
+    min: 0
+    max: 9
+  default: 4
+- name: ccpassing
+  order: 81
+  type: int
+  range:
+    min: 1
+    max: 100
+  default: 50
+- name: profitability
+  order: 82
+  type: int
+  range:
+    min: 0
+    max: 10
+  default: 3
+- name: utcoffset
+  order: 83
+  type: int
+  range:
+    min: -12
+    max: 13
+  default: 0
+- name: penaltytakerid
+  order: 84
+  type: int
+  range:
+    min: -1
+    max: 500000
+  default: 1
+- name: freekicktakerid
+  order: 85
+  type: int
+  range:
+    min: -1
+    max: 500000
+  default: 1
+- name: crowdskintonecode
+  order: 86
+  type: int
+  range:
+    min: 0
+    max: 15
+  default: 2
+- name: defdefenderline
+  order: 87
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: internationalprestige
+  order: 88
+  type: int
+  range:
+    min: 0
+    max: 20
+  default: 5
+- name: trainingstadium
+  order: 89
+  type: int
+  range:
+    min: 0
+    max: 2000
+  default: 352
+- name: form
+  order: 90
+  type: int
+  range:
+    min: 0
+    max: 100
+  default: 0
+- name: genericint1
+  order: 91
+  type: int
+  range:
+    min: -1
+    max: 100
+  default: -1
+- name: cccrossing
+  order: 92
+  type: int
+  range:
+    min: 1
+    max: 100
+  default: 50
+- name: trait1vstrong
+  order: 93
+  type: int
+  range:
+    min: 0
+    max: 2097151
+  default: 0
+- name: matchdayattackrating
+  order: 94
+  type: int
+  range:
+    min: 0
+    max: 99
+  default: 50

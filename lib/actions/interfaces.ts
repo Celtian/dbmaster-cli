@@ -1,0 +1,34 @@
+import { WriteStream } from 'fs';
+import { Field, RawData, Table } from '../interfaces';
+
+export type StreamBuilderType = NodeJS.ReadWriteStream | WriteStream;
+
+export enum OutputFormat {
+  Csv = 'csv',
+  Json = 'json'
+}
+
+export enum ActionType {
+  ActionAppendDefault = 'append-default',
+  ActionExtendContract = 'extend-contract',
+  ActionValidate = 'validate',
+  ActionFilter = 'filter'
+}
+
+export interface ActionFactoryAction {
+  type: ActionType;
+  filterFn?: (data: RawData) => boolean;
+}
+
+export interface ActionFactorySource {
+  folder: string;
+  fields: Field[];
+  format?: OutputFormat;
+}
+
+export interface ActionFactoryOptions {
+  table: Table;
+  input: ActionFactorySource;
+  actions: ActionFactoryAction[];
+  output?: ActionFactorySource;
+}

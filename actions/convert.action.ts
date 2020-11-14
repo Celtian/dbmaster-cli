@@ -1,20 +1,17 @@
 import chalk from 'chalk';
 import { Input } from '../commands';
-import { MultiTableHandler } from '../lib/handlers';
-import { Fifa, Table } from '../lib/interfaces';
+import { actionFactory } from '../lib/actions';
+import { configFactory } from '../lib/config';
+import { Table } from '../lib/interfaces';
 import { AbstractAction } from './abstract.action';
 
 export class ConvertAction extends AbstractAction {
   public async handle(inputs: Input[], options: Input[]): Promise<void> {
-    const from = options.find((option) => option.name === 'from');
-    const to = options.find((option) => option.name === 'to');
-    const input = options.find((option) => option.name === 'input');
-    const output = options.find((option) => option.name === 'output');
-
-    const converter = new MultiTableHandler(from.value as Fifa, to.value as Fifa);
+    const path = options.find((option) => option.name === 'config').value as string;
+    const cfg = configFactory(path);
     for (const table of Object.values(Table)) {
       console.info(chalk.green(`[${table}]`));
-      const list = await converter.convertTable(table, input.value as string, output.value as string);
+      const list = await actionFactory(cfg.tableConfig(table));
       console.info('Converted :', chalk.blue(list.length));
     }
   }

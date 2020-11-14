@@ -1,5 +1,6 @@
 import { Transform, TransformCallback, TransformOptions } from 'stream';
 import { Field } from '../interfaces';
+import { sortByOrder } from '../utils';
 
 export interface Json2CsvTransformOptions extends TransformOptions {
   fields: Field[];
@@ -16,7 +17,7 @@ export class Json2CsvTransform extends Transform {
 
   public _transform(chunk: Buffer, encoding: string, callback: TransformCallback): void {
     const lines: string[] = [];
-    const orderedFields = this.opts.fields.sort((a, b) => a.order - b.order);
+    const orderedFields = this.opts.fields.sort(sortByOrder);
     if (this.line === 0) {
       lines.push(orderedFields.map((f) => f.name).join('\t'));
     }
