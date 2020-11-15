@@ -1,4 +1,5 @@
 export enum Fifa {
+  Fifa13 = 'fifa13',
   Fifa14 = 'fifa14',
   Fifa15 = 'fifa15',
   Fifa16 = 'fifa16',

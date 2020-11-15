@@ -19,11 +19,11 @@ const displayBanner = () => {
 
 const displaySystemInformation = (): void => {
   console.info(chalk.green('[System Information]'));
-  console.info('OS Version     :', chalk.blue(osName(platform(), release())));
-  console.info('NodeJS Version :', chalk.blue(process.version));
+  console.info('OS Version     :', chalk.yellow(osName(platform(), release())));
+  console.info('NodeJS Version :', chalk.yellow(process.version));
 };
 
 const displayCliInformation = () => {
   console.info(chalk.green('[Cli Information]'));
-  console.info('Cli Version    :', chalk.blue(version));
+  console.info('Cli Version    :', chalk.yellow(version));
 };

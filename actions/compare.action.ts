@@ -26,15 +26,15 @@ export class CompareAction extends AbstractAction {
 
     switch (mode.value as CompareMode) {
       case CompareMode.Columns:
-        console.info(chalk.green(`[${table.value}]`), chalk.blue('comparsion of columns'));
+        console.info(chalk.green(`[${table.value}]`), chalk.yellow('comparsion of columns'));
         compare.printDiffColumns(table.value as Table);
         break;
       case CompareMode.Defaults:
-        console.info(chalk.green(`[${table.value}]`), chalk.blue('comparsion of defaults'));
+        console.info(chalk.green(`[${table.value}]`), chalk.yellow('comparsion of defaults'));
         compare.printDiffDefaults(table.value as Table);
         break;
       case CompareMode.Range:
-        console.info(chalk.green(`[${table.value}]`), chalk.blue('comparsion of ranges'));
+        console.info(chalk.green(`[${table.value}]`), chalk.yellow('comparsion of ranges'));
         compare.printDiffRange(table.value as Table);
         break;
       default:

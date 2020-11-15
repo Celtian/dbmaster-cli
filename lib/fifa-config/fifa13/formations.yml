@@ -1,0 +1,531 @@
+- name: offset6x
+  order: 0
+  type: float
+  default: 0.65
+- name: offset5y
+  order: 1
+  type: float
+  default: 0.5
+- name: offset10x
+  order: 2
+  type: float
+  default: 0.32
+- name: offset2x
+  order: 3
+  type: float
+  default: 0.64
+- name: defenders
+  order: 4
+  type: float
+  default: 4
+- name: offset2y
+  order: 5
+  type: float
+  default: 0.15
+- name: offset6y
+  order: 6
+  type: float
+  default: 0.45
+- name: offset7x
+  order: 7
+  type: float
+  default: 0.35
+- name: offset3x
+  order: 8
+  type: float
+  default: 0.36
+- name: offset8x
+  order: 9
+  type: float
+  default: 0.08
+- name: offset10y
+  order: 10
+  type: float
+  default: 0.87
+- name: offset3y
+  order: 11
+  type: float
+  default: 0.15
+- name: offset4x
+  order: 12
+  type: float
+  default: 0.1
+- name: offset7y
+  order: 13
+  type: float
+  default: 0.45
+- name: offset0x
+  order: 14
+  type: float
+  default: 0.5
+- name: offset8y
+  order: 15
+  type: float
+  default: 0.5
+- name: attackers
+  order: 16
+  type: float
+  default: 2
+- name: offset9x
+  order: 17
+  type: float
+  default: 0.68
+- name: midfielders
+  order: 18
+  type: float
+  default: 4
+- name: offset5x
+  order: 19
+  type: float
+  default: 0.92
+- name: offset0y
+  order: 20
+  type: float
+  default: 0.075
+- name: offset1x
+  order: 21
+  type: float
+  default: 0.9
+- name: offset4y
+  order: 22
+  type: float
+  default: 0.2
+- name: offset9y
+  order: 23
+  type: float
+  default: 0.87
+- name: offset1y
+  order: 24
+  type: float
+  default: 0.2
+- name: formationname
+  order: 25
+  type: string
+  default: '4-4-2'
+- name: attackingdirection_0
+  order: 26
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 0
+- name: attackingrole_5
+  order: 27
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 3
+- name: position10
+  order: 28
+  type: int
+  range:
+    min: 1
+    max: 32
+  default: 26
+- name: attackingdirection_7
+  order: 29
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 0
+- name: defensivedirection_0
+  order: 30
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 0
+- name: defensivedirection_9
+  order: 31
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 0
+- name: defensivedirection_8
+  order: 32
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 0
+- name: attackingdirection_9
+  order: 33
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 0
+- name: position6
+  order: 34
+  type: int
+  range:
+    min: 1
+    max: 32
+  default: 13
+- name: attackingrole_4
+  order: 35
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 3
+- name: offensiverating
+  order: 36
+  type: int
+  range:
+    min: 0
+    max: 4
+  default: 2
+- name: attackingrole_2
+  order: 37
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 3
+- name: attackingdirection_1
+  order: 38
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 0
+- name: position8
+  order: 39
+  type: int
+  range:
+    min: 1
+    max: 32
+  default: 16
+- name: defensiverole_4
+  order: 40
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 3
+- name: attackingdirection_10
+  order: 41
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 0
+- name: defensivedirection_6
+  order: 42
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 0
+- name: attackingdirection_8
+  order: 43
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 0
+- name: attackingrole_3
+  order: 44
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 3
+- name: defensiverole_3
+  order: 45
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 3
+- name: attackingrole_0
+  order: 46
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 3
+- name: defensivedirection_1
+  order: 47
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 0
+- name: attackingdirection_5
+  order: 48
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 0
+- name: defensivedirection_2
+  order: 49
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 0
+- name: attackingdirection_6
+  order: 50
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 0
+- name: position5
+  order: 51
+  type: int
+  range:
+    min: 1
+    max: 32
+  default: 12
+- name: attackingrole_7
+  order: 52
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 3
+- name: defensiverole_5
+  order: 53
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 3
+- name: defensivedirection_10
+  order: 54
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 0
+- name: defensivedirection_3
+  order: 55
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 0
+- name: defensivedirection_5
+  order: 56
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 0
+- name: issweeper
+  order: 57
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: attackingdirection_2
+  order: 58
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 0
+- name: attackingdirection_4
+  order: 59
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 0
+- name: attackingrole_9
+  order: 60
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 3
+- name: defensiverole_2
+  order: 61
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 3
+- name: attackingdirection_3
+  order: 62
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 0
+- name: attackingrole_8
+  order: 63
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 3
+- name: attackingrole_1
+  order: 64
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 3
+- name: defensiverole_10
+  order: 65
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 3
+- name: defensiverole_1
+  order: 66
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 3
+- name: teamid
+  order: 67
+  type: int
+  range:
+    min: -2
+    max: 200000
+  default: -1
+- name: position2
+  order: 68
+  type: int
+  range:
+    min: 1
+    max: 32
+  default: 4
+- name: defensivedirection_4
+  order: 69
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 0
+- name: formationid
+  order: 70
+  type: int
+  range:
+    min: 0
+    max: 1000
+  default: 16
+- name: defensiverole_8
+  order: 71
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 3
+- name: attackingrole_6
+  order: 72
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 3
+- name: relativeformationid
+  order: 73
+  type: int
+  range:
+    min: -1
+    max: 1000
+  default: 16
+- name: defensiverole_0
+  order: 74
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 3
+- name: defensiverole_6
+  order: 75
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 3
+- name: position4
+  order: 76
+  type: int
+  range:
+    min: 1
+    max: 32
+  default: 7
+- name: attackingrole_10
+  order: 77
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 3
+- name: position3
+  order: 78
+  type: int
+  range:
+    min: 1
+    max: 32
+  default: 6
+- name: defensiverole_7
+  order: 79
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 3
+- name: formationfullnameid
+  order: 80
+  type: int
+  range:
+    min: -1
+    max: 30
+  default: 11
+- name: defensiverole_9
+  order: 81
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 3
+- name: position0
+  order: 82
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: position9
+  order: 83
+  type: int
+  range:
+    min: 1
+    max: 32
+  default: 24
+- name: position7
+  order: 84
+  type: int
+  range:
+    min: 1
+    max: 32
+  default: 15
+- name: position1
+  order: 85
+  type: int
+  range:
+    min: 1
+    max: 32
+  default: 3
+- name: defensivedirection_7
+  order: 86
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 0

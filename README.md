@@ -74,7 +74,7 @@ dbmaster compare --from fifa20 --to fifa16 --table players --mode columns
 | ----------- | --------- |
 | **Fifa 11** | ✗         |
 | **Fifa 12** | ✗         |
-| **Fifa 13** | ✗         |
+| **Fifa 13** | ✓         |
 | **Fifa 14** | ✓         |
 | **Fifa 15** | ✓         |
 | **Fifa 16** | ✓         |

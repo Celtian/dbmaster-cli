@@ -12,7 +12,7 @@ export class ConvertAction extends AbstractAction {
     for (const table of Object.values(Table)) {
       console.info(chalk.green(`[${table}]`));
       const list = await actionFactory(cfg.tableConfig(table));
-      console.info('Converted :', chalk.blue(list.length));
+      console.info('Converted :', chalk.yellow(list.length));
     }
   }
 }
