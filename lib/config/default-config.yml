@@ -1,6 +1,6 @@
 input:
-  version: fifa15
-  folder: 'examples/fifa15'
+  version: fifa14
+  folder: 'examples/fifa14'
 
 actions:
   - type: validate
@@ -9,6 +9,6 @@ actions:
   # - type: append-default
 
 output:
-  version: fifa15
+  version: fifa14
   folder: 'output'
   format: json

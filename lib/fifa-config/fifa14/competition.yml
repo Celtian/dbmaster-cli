@@ -1,0 +1,14 @@
+- name: ballid
+  order: 0
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: competitionid
+  order: 1
+  type: int
+  range:
+    min: 0
+    max: 2047
+  default: 1

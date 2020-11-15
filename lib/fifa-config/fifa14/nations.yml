@@ -1,0 +1,39 @@
+- name: nationname
+  order: 0
+  type: string
+  default: ''
+- name: nationid
+  order: 1
+  type: int
+  range:
+    min: 1
+    max: 250
+  default: 1
+- name: confederation
+  order: 2
+  type: int
+  range:
+    min: 1
+    max: 7
+  default: 1
+- name: top_tier
+  order: 3
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: nationstartingfirstletter
+  order: 4
+  type: int
+  range:
+    min: 1
+    max: 26
+  default: 1
+- name: teamid
+  order: 5
+  type: int
+  range:
+    min: -1
+    max: 200000
+  default: -1

@@ -38,7 +38,7 @@
   type: int
   range:
     min: 0
-    max: 200
+    max: 33
   default: 0
 - name: artificialkey
   order: 6
@@ -86,7 +86,7 @@
   order: 12
   type: int
   range:
-    min: 1
+    min: 0
     max: 300000
   default: 1
 - name: form

@@ -1,19 +1,19 @@
 - name: offset6x
   order: 0
   type: float
-  default: 0.675
+  default: 0.65
 - name: offset5y
   order: 1
   type: float
-  default: 0.525
+  default: 0.5
 - name: offset10x
   order: 2
   type: float
-  default: 0.325
+  default: 0.32
 - name: offset2x
   order: 3
   type: float
-  default: 0.65
+  default: 0.64
 - name: defenders
   order: 4
   type: float
@@ -25,11 +25,11 @@
 - name: offset6y
   order: 6
   type: float
-  default: 0.475
+  default: 0.45
 - name: offset7x
   order: 7
   type: float
-  default: 0.325
+  default: 0.35
 - name: offset3x
   order: 8
   type: float
@@ -53,7 +53,7 @@
 - name: offset7y
   order: 13
   type: float
-  default: 0.475
+  default: 0.45
 - name: offset0x
   order: 14
   type: float
@@ -61,7 +61,7 @@
 - name: offset8y
   order: 15
   type: float
-  default: 0.525
+  default: 0.5
 - name: attackers
   order: 16
   type: float
@@ -69,7 +69,7 @@
 - name: offset9x
   order: 17
   type: float
-  default: 0.675
+  default: 0.68
 - name: midfielders
   order: 18
   type: float
@@ -109,484 +109,421 @@
     min: 0
     max: 5
   default: 0
-- name: playerinstruction10
-  order: 27
-  type: int
-  range:
-    min: 0
-    max: 1073741823
-  default: 294920
 - name: attackingrole_5
-  order: 28
+  order: 27
   type: int
   range:
     min: 0
     max: 3
   default: 3
 - name: position10
-  order: 29
+  order: 28
   type: int
   range:
     min: 1
     max: 32
   default: 26
 - name: attackingdirection_7
-  order: 30
+  order: 29
   type: int
   range:
     min: 0
     max: 5
   default: 0
 - name: defensivedirection_0
-  order: 31
+  order: 30
   type: int
   range:
     min: 0
     max: 5
   default: 0
 - name: defensivedirection_9
+  order: 31
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 0
+- name: defensivedirection_8
   order: 32
   type: int
   range:
     min: 0
     max: 5
   default: 0
-- name: playerinstruction2
-  order: 33
-  type: int
-  range:
-    min: 0
-    max: 1073741823
-  default: 16
-- name: defensivedirection_8
-  order: 34
-  type: int
-  range:
-    min: 0
-    max: 5
-  default: 0
-- name: playerinstruction5
-  order: 35
-  type: int
-  range:
-    min: 0
-    max: 1073741823
-  default: 2394112
-- name: playerinstruction3
-  order: 36
-  type: int
-  range:
-    min: 0
-    max: 1073741823
-  default: 16
 - name: attackingdirection_9
-  order: 37
+  order: 33
   type: int
   range:
     min: 0
     max: 5
   default: 0
 - name: position6
-  order: 38
+  order: 34
   type: int
   range:
     min: 1
     max: 32
   default: 13
 - name: attackingrole_4
-  order: 39
+  order: 35
   type: int
   range:
     min: 0
     max: 3
   default: 3
 - name: offensiverating
-  order: 40
+  order: 36
   type: int
   range:
     min: 0
     max: 4
   default: 2
 - name: attackingrole_2
-  order: 41
+  order: 37
   type: int
   range:
     min: 0
     max: 3
   default: 3
 - name: attackingdirection_1
-  order: 42
+  order: 38
   type: int
   range:
     min: 0
     max: 5
   default: 0
 - name: position8
-  order: 43
+  order: 39
   type: int
   range:
     min: 1
     max: 32
   default: 16
 - name: defensiverole_4
-  order: 44
+  order: 40
   type: int
   range:
     min: 0
     max: 3
   default: 3
 - name: attackingdirection_10
-  order: 45
+  order: 41
   type: int
   range:
     min: 0
     max: 5
   default: 0
 - name: defensivedirection_6
-  order: 46
+  order: 42
   type: int
   range:
     min: 0
     max: 5
   default: 0
-- name: playerinstruction7
-  order: 47
-  type: int
-  range:
-    min: 0
-    max: 1073741823
-  default: 134220032
 - name: attackingdirection_8
-  order: 48
+  order: 43
   type: int
   range:
     min: 0
     max: 5
   default: 0
 - name: attackingrole_3
-  order: 49
+  order: 44
   type: int
   range:
     min: 0
     max: 3
   default: 3
-- name: playerinstruction4
-  order: 50
-  type: int
-  range:
-    min: 0
-    max: 1073741823
-  default: 8
 - name: defensiverole_3
-  order: 51
+  order: 45
   type: int
   range:
     min: 0
     max: 3
   default: 3
 - name: attackingrole_0
-  order: 52
+  order: 46
   type: int
   range:
     min: 0
     max: 3
   default: 3
 - name: defensivedirection_1
-  order: 53
+  order: 47
   type: int
   range:
     min: 0
     max: 5
   default: 0
 - name: attackingdirection_5
-  order: 54
+  order: 48
   type: int
   range:
     min: 0
     max: 5
   default: 0
 - name: defensivedirection_2
-  order: 55
+  order: 49
   type: int
   range:
     min: 0
     max: 5
   default: 0
 - name: attackingdirection_6
-  order: 56
+  order: 50
   type: int
   range:
     min: 0
     max: 5
   default: 0
-- name: playerinstruction9
-  order: 57
-  type: int
-  range:
-    min: 0
-    max: 1073741823
-  default: 294920
 - name: position5
-  order: 58
+  order: 51
   type: int
   range:
     min: 1
     max: 32
   default: 12
 - name: attackingrole_7
-  order: 59
+  order: 52
   type: int
   range:
     min: 0
     max: 3
   default: 3
 - name: defensiverole_5
-  order: 60
+  order: 53
   type: int
   range:
     min: 0
     max: 3
   default: 3
-- name: playerinstruction0
-  order: 61
-  type: int
-  range:
-    min: 0
-    max: 1073741823
-  default: 0
 - name: defensivedirection_10
-  order: 62
+  order: 54
   type: int
   range:
     min: 0
     max: 5
   default: 0
 - name: defensivedirection_3
-  order: 63
+  order: 55
   type: int
   range:
     min: 0
     max: 5
   default: 0
-- name: playerinstruction8
-  order: 64
-  type: int
-  range:
-    min: 0
-    max: 1073741823
-  default: 2394112
 - name: defensivedirection_5
-  order: 65
+  order: 56
   type: int
   range:
     min: 0
     max: 5
+  default: 0
+- name: issweeper
+  order: 57
+  type: int
+  range:
+    min: 0
+    max: 1
   default: 0
 - name: attackingdirection_2
-  order: 66
+  order: 58
   type: int
   range:
     min: 0
     max: 5
   default: 0
 - name: attackingdirection_4
-  order: 67
+  order: 59
   type: int
   range:
     min: 0
     max: 5
   default: 0
 - name: attackingrole_9
-  order: 68
+  order: 60
   type: int
   range:
     min: 0
     max: 3
   default: 3
 - name: defensiverole_2
-  order: 69
+  order: 61
   type: int
   range:
     min: 0
     max: 3
   default: 3
 - name: attackingdirection_3
-  order: 70
+  order: 62
   type: int
   range:
     min: 0
     max: 5
   default: 0
 - name: attackingrole_8
-  order: 71
+  order: 63
   type: int
   range:
     min: 0
     max: 3
   default: 3
 - name: attackingrole_1
-  order: 72
+  order: 64
   type: int
   range:
     min: 0
     max: 3
   default: 3
 - name: defensiverole_10
-  order: 73
+  order: 65
   type: int
   range:
     min: 0
     max: 3
   default: 3
 - name: defensiverole_1
-  order: 74
+  order: 66
   type: int
   range:
     min: 0
     max: 3
   default: 3
 - name: teamid
-  order: 75
+  order: 67
   type: int
   range:
     min: -2
     max: 200000
   default: -1
-- name: playerinstruction6
-  order: 76
-  type: int
-  range:
-    min: 0
-    max: 1073741823
-  default: 134220032
 - name: position2
-  order: 77
+  order: 68
   type: int
   range:
     min: 1
     max: 32
   default: 4
 - name: defensivedirection_4
-  order: 78
+  order: 69
   type: int
   range:
     min: 0
     max: 5
   default: 0
 - name: formationid
-  order: 79
+  order: 70
   type: int
   range:
     min: 0
     max: 1000
   default: 16
-- name: playerinstruction1
-  order: 80
-  type: int
-  range:
-    min: 0
-    max: 1073741823
-  default: 8
 - name: defensiverole_8
-  order: 81
+  order: 71
   type: int
   range:
     min: 0
     max: 3
   default: 3
 - name: attackingrole_6
-  order: 82
+  order: 72
   type: int
   range:
     min: 0
     max: 3
   default: 3
+- name: relativeformationid
+  order: 73
+  type: int
+  range:
+    min: -1
+    max: 1000
+  default: 16
 - name: defensiverole_0
-  order: 83
+  order: 74
   type: int
   range:
     min: 0
     max: 3
   default: 3
 - name: defensiverole_6
-  order: 84
+  order: 75
   type: int
   range:
     min: 0
     max: 3
   default: 3
 - name: position4
-  order: 85
+  order: 76
   type: int
   range:
     min: 1
     max: 32
   default: 7
 - name: attackingrole_10
-  order: 86
+  order: 77
   type: int
   range:
     min: 0
     max: 3
   default: 3
 - name: position3
-  order: 87
+  order: 78
   type: int
   range:
     min: 1
     max: 32
   default: 6
 - name: defensiverole_7
-  order: 88
+  order: 79
   type: int
   range:
     min: 0
     max: 3
   default: 3
 - name: formationfullnameid
-  order: 89
+  order: 80
   type: int
   range:
     min: -1
     max: 30
   default: 11
 - name: defensiverole_9
-  order: 90
+  order: 81
   type: int
   range:
     min: 0
     max: 3
   default: 3
 - name: position0
-  order: 91
+  order: 82
   type: int
   range:
     min: 0
     max: 1
   default: 0
 - name: position9
-  order: 92
+  order: 83
   type: int
   range:
     min: 1
     max: 32
   default: 24
 - name: position7
-  order: 93
+  order: 84
   type: int
   range:
     min: 1
     max: 32
   default: 15
 - name: position1
-  order: 94
+  order: 85
   type: int
   range:
     min: 1
     max: 32
   default: 3
 - name: defensivedirection_7
-  order: 95
+  order: 86
   type: int
   range:
     min: 0
