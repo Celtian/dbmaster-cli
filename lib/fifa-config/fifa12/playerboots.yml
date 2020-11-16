@@ -1,0 +1,28 @@
+- name: shoetype
+  order: 0
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: islicensed
+  order: 1
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: isavailableinstore
+  order: 2
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 1
+- name: shoecolor
+  order: 3
+  type: int
+  range:
+    min: 0
+    max: 31
+  default: 0
