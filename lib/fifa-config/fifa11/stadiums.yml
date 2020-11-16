@@ -1,0 +1,200 @@
+- name: yearbuilt
+  order: 0
+  type: int
+  range:
+    min: 1800
+    max: 2007
+  default: 1950
+- name: stadiumid
+  order: 1
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 1
+- name: name
+  order: 2
+  type: string
+  default: ''
+- name: timeofday3
+  order: 3
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 5
+- name: adboardsidelinedistance
+  order: 4
+  type: int
+  range:
+    min: 0
+    max: 999999
+  default: 400
+- name: stadiumgloalnetdepth
+  order: 5
+  type: int
+  range:
+    min: 0
+    max: 999999
+  default: 229
+- name: hometeamid
+  order: 6
+  type: int
+  range:
+    min: 0
+    max: 200000
+  default: 1
+- name: capacity
+  order: 7
+  type: int
+  range:
+    min: 0
+    max: 200000
+  default: 10000
+- name: seatcolor
+  order: 8
+  type: int
+  range:
+    min: 1
+    max: 8
+  default: 1
+- name: sectionfacedbydefault
+  order: 9
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: policetypecode
+  order: 10
+  type: int
+  range:
+    min: 0
+    max: 8
+  default: 0
+- name: timeofday4
+  order: 11
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 5
+- name: stadiumpitchlength
+  order: 12
+  type: int
+  range:
+    min: 0
+    max: 999999
+  default: 10500
+- name: stadiumgoalnetstyle
+  order: 13
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 0
+- name: tod4weather
+  order: 14
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 0
+- name: countrycode
+  order: 15
+  type: int
+  range:
+    min: 0
+    max: 3000
+  default: 0
+- name: stadiummowpattern_code
+  order: 16
+  type: int
+  range:
+    min: 0
+    max: 12
+  default: 0
+- name: citycode
+  order: 17
+  type: int
+  range:
+    min: 0
+    max: 1000
+  default: 0
+- name: stadiumpitchwidth
+  order: 18
+  type: int
+  range:
+    min: 0
+    max: 999999
+  default: 6800
+- name: stadiumtype
+  order: 19
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 0
+- name: tod1weather
+  order: 20
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 0
+- name: dlc
+  order: 21
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: tod2weather
+  order: 22
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 0
+- name: adboardendlinedistance
+  order: 23
+  type: int
+  range:
+    min: 0
+    max: 999999
+  default: 0
+- name: tod3weather
+  order: 24
+  type: int
+  range:
+    min: 0
+    max: 3
+  default: 0
+- name: timeofday1
+  order: 25
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 1
+- name: timeofday2
+  order: 26
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 3
+- name: stadiumgoalnetwidth
+  order: 27
+  type: int
+  range:
+    min: 0
+    max: 999999
+  default: 744
+- name: stadiumgoalnetlength
+  order: 28
+  type: int
+  range:
+    min: 0
+    max: 999999
+  default: 250

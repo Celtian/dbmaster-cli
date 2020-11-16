@@ -1,0 +1,305 @@
+- name: balltype
+  order: 0
+  type: int
+  range:
+    min: 1
+    max: 255
+  default: 0
+- name: teamcolor1g
+  order: 1
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: teamcolor1r
+  order: 2
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: teamcolor2b
+  order: 3
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: teamcolor2r
+  order: 4
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: teamcolor3r
+  order: 5
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: teamcolor1b
+  order: 6
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: teamcolor3g
+  order: 7
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: teamcolor2g
+  order: 8
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: teamname
+  order: 9
+  type: string
+  default: ''
+- name: adboardid
+  order: 10
+  type: int
+  range:
+    min: 1
+    max: 245
+  default: 1
+- name: teamcolor3b
+  order: 11
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: defmentality
+  order: 12
+  type: int
+  range:
+    min: 1
+    max: 100
+  default: 50
+- name: managerid
+  order: 13
+  type: int
+  range:
+    min: 1
+    max: 16000
+  default: 8105
+- name: physioid_secondary
+  order: 14
+  type: int
+  range:
+    min: 0
+    max: 14000
+  default: 2
+- name: domesticprestige
+  order: 15
+  type: int
+  range:
+    min: 0
+    max: 20
+  default: 10
+- name: jerseytype
+  order: 16
+  type: int
+  range:
+    min: 0
+    max: 2
+  default: 2
+- name: rivalteam
+  order: 17
+  type: int
+  range:
+    min: 1
+    max: 200000
+  default: 1
+- name: assetid
+  order: 18
+  type: int
+  range:
+    min: 1
+    max: 200000
+  default: 1
+- name: physioid_primary
+  order: 19
+  type: int
+  range:
+    min: 1
+    max: 14000
+  default: 1
+- name: buspassing
+  order: 20
+  type: int
+  range:
+    min: 1
+    max: 100
+  default: 50
+- name: defteamwidth
+  order: 21
+  type: int
+  range:
+    min: 1
+    max: 100
+  default: 50
+- name: longkicktakerid
+  order: 22
+  type: int
+  range:
+    min: 1
+    max: 300000
+  default: 1
+- name: rightcornerkicktakerid
+  order: 23
+  type: int
+  range:
+    min: 1
+    max: 300000
+  default: 1
+- name: defaggression
+  order: 24
+  type: int
+  range:
+    min: 1
+    max: 100
+  default: 50
+- name: leftcornerkicktakerid
+  order: 25
+  type: int
+  range:
+    min: 1
+    max: 300000
+  default: 1
+- name: teamid
+  order: 26
+  type: int
+  range:
+    min: 1
+    max: 200000
+  default: 1
+- name: fancrowdhairskintexturecode
+  order: 27
+  type: int
+  range:
+    min: 0
+    max: 5
+  default: 0
+- name: numtransfersin
+  order: 28
+  type: int
+  range:
+    min: 0
+    max: 31
+  default: 0
+- name: captainid
+  order: 29
+  type: int
+  range:
+    min: 1
+    max: 300000
+  default: 1
+- name: genericbanner
+  order: 30
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: buspositioning
+  order: 31
+  type: int
+  range:
+    min: 1
+    max: 2
+  default: 1
+- name: stafftracksuitcolorcode
+  order: 32
+  type: int
+  range:
+    min: 0
+    max: 4
+  default: 0
+- name: ccpositioning
+  order: 33
+  type: int
+  range:
+    min: 1
+    max: 2
+  default: 1
+- name: busbuildupspeed
+  order: 34
+  type: int
+  range:
+    min: 1
+    max: 100
+  default: 50
+- name: transferbudget
+  order: 35
+  type: int
+  range:
+    min: 0
+    max: 500000000
+  default: 500000
+- name: ccshooting
+  order: 36
+  type: int
+  range:
+    min: 1
+    max: 100
+  default: 50
+- name: ccpassing
+  order: 37
+  type: int
+  range:
+    min: 1
+    max: 100
+  default: 50
+- name: penaltytakerid
+  order: 38
+  type: int
+  range:
+    min: 1
+    max: 300000
+  default: 1
+- name: freekicktakerid
+  order: 39
+  type: int
+  range:
+    min: 1
+    max: 300000
+  default: 1
+- name: defdefenderline
+  order: 40
+  type: int
+  range:
+    min: 1
+    max: 2
+  default: 1
+- name: internationalprestige
+  order: 41
+  type: int
+  range:
+    min: 0
+    max: 20
+  default: 10
+- name: form
+  order: 42
+  type: int
+  range:
+    min: 0
+    max: 100
+  default: 0
+- name: cccrossing
+  order: 43
+  type: int
+  range:
+    min: 1
+    max: 100
+  default: 50

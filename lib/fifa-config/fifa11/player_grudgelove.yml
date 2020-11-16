@@ -1,0 +1,35 @@
+- name: level_of_emotion
+  order: 0
+  type: int
+  range:
+    min: 0
+    max: 7
+  default: 1
+- name: love_or_hate
+  order: 1
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
+- name: teamid
+  order: 2
+  type: int
+  range:
+    min: 1
+    max: 200000
+  default: 1
+- name: playerid
+  order: 3
+  type: int
+  range:
+    min: 0
+    max: 300000
+  default: 1
+- name: emotional_teamid
+  order: 4
+  type: int
+  range:
+    min: 1
+    max: 200000
+  default: 1
