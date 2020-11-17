@@ -64,9 +64,11 @@ dbmaster compare --from fifa21 --to fifa16 --table players --mode columns
 - [to](#supported-versions-of-fifa-soccer)
 - [table](#supported-tables)
 - mode
-  - columns - show you if column is present or not
-  - defaults - show you default values used by algorithms
-  - range - range of integer value, specially used by validation functions
+  - column - Is the column present?
+  - default - What is the default value of the column?
+  - order - What is the correct order of the column?
+  - range - What is the range of integer the column?
+  - type - What is the correct datatype of the column?
 
 ## Supported versions of Fifa Soccer
 

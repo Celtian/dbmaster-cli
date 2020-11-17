@@ -5,9 +5,11 @@ import { Fifa, Table } from '../lib/interfaces';
 import { AbstractAction } from './abstract.action';
 
 export enum CompareMode {
-  Columns = 'columns',
-  Defaults = 'defaults',
-  Range = 'range'
+  Column = 'column',
+  Default = 'default',
+  Order = 'order',
+  Range = 'range',
+  Type = 'type'
 }
 
 export class CompareAction extends AbstractAction {
@@ -25,17 +27,25 @@ export class CompareAction extends AbstractAction {
     const compare = new CompareFifaConfig(from.value as Fifa, to.value as Fifa);
 
     switch (mode.value as CompareMode) {
-      case CompareMode.Columns:
-        console.info(chalk.green(`[${table.value}]`), chalk.yellow('comparsion of columns'));
+      case CompareMode.Column:
+        console.info(chalk.green(`[${table.value}]`), chalk.yellow('Is the column present?'));
         compare.printDiffColumns(table.value as Table);
         break;
-      case CompareMode.Defaults:
-        console.info(chalk.green(`[${table.value}]`), chalk.yellow('comparsion of defaults'));
+      case CompareMode.Default:
+        console.info(chalk.green(`[${table.value}]`), chalk.yellow('What is the default value of the column?'));
         compare.printDiffDefaults(table.value as Table);
         break;
+      case CompareMode.Order:
+        console.info(chalk.green(`[${table.value}]`), chalk.yellow('What is the correct order of the column?'));
+        compare.printDiffOrder(table.value as Table);
+        break;
       case CompareMode.Range:
-        console.info(chalk.green(`[${table.value}]`), chalk.yellow('comparsion of ranges'));
+        console.info(chalk.green(`[${table.value}]`), chalk.yellow('What is the range of integer the column?'));
         compare.printDiffRange(table.value as Table);
+        break;
+      case CompareMode.Type:
+        console.info(chalk.green(`[${table.value}]`), chalk.yellow('What is the correct datatype of the column?'));
+        compare.printDiffDatatype(table.value as Table);
         break;
       default:
         console.error('Invalid argument "mode".');

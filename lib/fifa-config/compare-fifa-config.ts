@@ -2,11 +2,6 @@ import { Field, Fifa, Table } from '../interfaces';
 import { FifaConfig } from './fifa-config';
 import { fifaConfigFactory } from './fifa-config-factory';
 
-export enum CheckMark {
-  False = '✗',
-  True = '✓'
-}
-
 export interface CompareFifaConfigCategorizedFields {
   bothTables: string[];
   firstTable: string[];
@@ -22,7 +17,47 @@ export class CompareFifaConfig {
     this.configSecond = fifaConfigFactory(this.fifaSecond);
   }
 
-  public compareTableDefinition(table: Table): CompareFifaConfigCategorizedFields {
+  public printDiffColumns(table: Table): void {
+    const { bothTables, firstTable, secondTable } = this.compareTableDefinition(table);
+
+    const data = [...bothTables, ...firstTable, ...secondTable].sort().reduce(
+      (r, field) => ({
+        ...r,
+        [field]: {
+          [this.fifaFirst]: firstTable.includes(field) || bothTables.includes(field),
+          [this.fifaSecond]: secondTable.includes(field) || bothTables.includes(field)
+        }
+      }),
+      {}
+    );
+
+    console.table(data, [this.fifaFirst, this.fifaSecond]);
+  }
+
+  public printDiffDefaults(table: Table): void {
+    this.printDiffTable(table, 'default');
+  }
+
+  public printDiffDatatype(table: Table): void {
+    this.printDiffTable(table, 'type');
+  }
+
+  public printDiffRange(table: Table): void {
+    this.printDiffTable(
+      table,
+      'range',
+      (valueFirst, valueSecond) =>
+        (valueFirst && valueSecond && (valueFirst.min !== valueSecond.min || valueFirst.max !== valueFirst.max)) ||
+        Boolean(!valueFirst && valueSecond) ||
+        Boolean(valueFirst && !valueSecond)
+    );
+  }
+
+  public printDiffOrder(table: Table): void {
+    this.printDiffTable(table, 'order');
+  }
+
+  private compareTableDefinition(table: Table): CompareFifaConfigCategorizedFields {
     const tableFirst: Field[] = this.configFirst[table];
     const tableSecond: Field[] = this.configSecond[table];
 
@@ -46,25 +81,11 @@ export class CompareFifaConfig {
     };
   }
 
-  public printDiffColumns(table: Table): void {
-    const { bothTables, firstTable, secondTable } = this.compareTableDefinition(table);
-
-    const data = [...bothTables, ...firstTable, ...secondTable].sort().reduce(
-      (r, field) => ({
-        ...r,
-        [field]: {
-          [this.fifaFirst]: firstTable.includes(field) || bothTables.includes(field) ? CheckMark.True : CheckMark.False,
-          [this.fifaSecond]:
-            secondTable.includes(field) || bothTables.includes(field) ? CheckMark.True : CheckMark.False
-        }
-      }),
-      {}
-    );
-
-    console.table(data, [this.fifaFirst, this.fifaSecond]);
-  }
-
-  public printDiffDefaults(table: Table): void {
+  private printDiffTable(
+    table: Table,
+    mode: 'default' | 'type' | 'range' | 'order',
+    diffFn?: (valueFirst: any, valueSecond: any) => boolean
+  ): void {
     const { bothTables, firstTable, secondTable } = this.compareTableDefinition(table);
 
     const tableFirst: Field[] = this.configFirst[table];
@@ -73,48 +94,23 @@ export class CompareFifaConfig {
     const data = [...bothTables, ...firstTable, ...secondTable].sort().reduce((r, field: string) => {
       const valueFirst =
         firstTable.includes(field) || bothTables.includes(field)
-          ? tableFirst.find((f) => f.name === field).default
+          ? tableFirst.find((f) => f.name === field)[mode]
           : undefined;
       const valueSecond =
         secondTable.includes(field) || bothTables.includes(field)
-          ? tableSecond.find((f) => f.name === field).default
+          ? tableSecond.find((f) => f.name === field)[mode]
           : undefined;
+
       return {
         ...r,
         [field]: {
           [this.fifaFirst]: valueFirst,
           [this.fifaSecond]: valueSecond,
-          diff: valueFirst !== valueSecond
+          diff: diffFn ? diffFn(valueFirst, valueSecond) : valueFirst !== valueSecond
         }
       };
     }, {});
 
     console.table(data, [this.fifaFirst, this.fifaSecond, 'diff']);
-  }
-
-  public printDiffRange(table: Table): void {
-    const { bothTables, firstTable, secondTable } = this.compareTableDefinition(table);
-
-    const tableFirst: Field[] = this.configFirst[table];
-    const tableSecond: Field[] = this.configSecond[table];
-
-    const data = [...bothTables, ...firstTable, ...secondTable].sort().reduce(
-      (r, field: string) => ({
-        ...r,
-        [field]: {
-          [this.fifaFirst]:
-            firstTable.includes(field) || bothTables.includes(field)
-              ? tableFirst.find((f) => f.name === field).range
-              : undefined,
-          [this.fifaSecond]:
-            secondTable.includes(field) || bothTables.includes(field)
-              ? tableSecond.find((f) => f.name === field).range
-              : undefined
-        }
-      }),
-      {}
-    );
-
-    console.table(data, [this.fifaFirst, this.fifaSecond]);
   }
 }
