@@ -282,7 +282,7 @@
   type: int
   range:
     min: 0
-    max: 1000
+    max: 2000
   default: 16
 - name: playerinstruction8_2
   order: 52

@@ -70,24 +70,26 @@ export class CompareFifaConfig {
     const tableFirst: Field[] = this.configFirst[table];
     const tableSecond: Field[] = this.configSecond[table];
 
-    const data = [...bothTables, ...firstTable, ...secondTable].sort().reduce(
-      (r, field: string) => ({
+    const data = [...bothTables, ...firstTable, ...secondTable].sort().reduce((r, field: string) => {
+      const valueFirst =
+        firstTable.includes(field) || bothTables.includes(field)
+          ? tableFirst.find((f) => f.name === field).default
+          : undefined;
+      const valueSecond =
+        secondTable.includes(field) || bothTables.includes(field)
+          ? tableSecond.find((f) => f.name === field).default
+          : undefined;
+      return {
         ...r,
         [field]: {
-          [this.fifaFirst]:
-            firstTable.includes(field) || bothTables.includes(field)
-              ? tableFirst.find((f) => f.name === field).default
-              : undefined,
-          [this.fifaSecond]:
-            secondTable.includes(field) || bothTables.includes(field)
-              ? tableSecond.find((f) => f.name === field).default
-              : undefined
+          [this.fifaFirst]: valueFirst,
+          [this.fifaSecond]: valueSecond,
+          diff: valueFirst !== valueSecond
         }
-      }),
-      {}
-    );
+      };
+    }, {});
 
-    console.table(data, [this.fifaFirst, this.fifaSecond]);
+    console.table(data, [this.fifaFirst, this.fifaSecond, 'diff']);
   }
 
   public printDiffRange(table: Table): void {

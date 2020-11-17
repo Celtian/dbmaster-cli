@@ -1,0 +1,74 @@
+- name: countryid
+  order: 0
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 1
+- name: leaguename
+  order: 1
+  type: string
+  default: ''
+- name: leaguetype
+  order: 2
+  type: int
+  range:
+    min: 0
+    max: 31
+  default: 0
+- name: level
+  order: 3
+  type: int
+  range:
+    min: 1
+    max: 4000
+  default: 1
+- name: iscompetitionscarfenabled
+  order: 4
+  type: int
+  range:
+    min: 0
+    max: 2
+  default: 0
+- name: isbannerenabled
+  order: 5
+  type: int
+  range:
+    min: 0
+    max: 2
+  default: 1
+- name: leagueid
+  order: 6
+  type: int
+  range:
+    min: 1
+    max: 4000
+  default: 1
+- name: iscompetitionpoleflagenabled
+  order: 7
+  type: int
+  range:
+    min: 0
+    max: 2
+  default: 0
+- name: iscompetitioncrowdcardsenabled
+  order: 8
+  type: int
+  range:
+    min: 0
+    max: 2
+  default: 2
+- name: leaguetimeslice
+  order: 9
+  type: int
+  range:
+    min: 0
+    max: 35
+  default: 0
+- name: iswithintransferwindow
+  order: 10
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0

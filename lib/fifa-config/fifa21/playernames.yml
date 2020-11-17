@@ -1,0 +1,18 @@
+- name: name
+  order: 0
+  type: string
+  default: ''
+- name: nameid
+  order: 1
+  type: int
+  range:
+    min: 0
+    max: 43999
+  default: 0
+- name: commentaryid
+  order: 2
+  type: int
+  range:
+    min: 900000
+    max: 965000
+  default: 900000

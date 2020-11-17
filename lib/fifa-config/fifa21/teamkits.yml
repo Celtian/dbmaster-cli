@@ -1,374 +1,374 @@
-- name: shortsnumberplacementcode
+- name: chestbadge
   order: 0
+  type: int
+  range:
+    min: 0
+    max: 9999999
+  default: 0
+- name: shortsnumberplacementcode
+  order: 1
   type: int
   range:
     min: 0
     max: 255
   default: 1
 - name: shortsnumbercolorprimg
-  order: 1
-  type: int
-  range:
-    min: 0
-    max: 255
-  default: 0
-- name: teamcolorsecb
   order: 2
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: shortsrenderingdetailmaptype
+- name: teamcolorsecb
   order: 3
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: jerseyfrontnumberplacementcode
+- name: shortsrenderingdetailmaptype
   order: 4
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: jerseynumbercolorsecr
+- name: jerseyfrontnumberplacementcode
   order: 5
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: jerseynumbercolorprimr
+- name: jerseynumbercolorsecr
   order: 6
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: jerseynumbercolorprimg
+- name: jerseynumbercolorprimr
   order: 7
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: shortsnumbercolorsecb
+- name: jerseynumbercolorprimg
   order: 8
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: teamcolorprimg
+- name: shortsnumbercolorsecb
   order: 9
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: shortsnumbercolorterb
+- name: teamcolorprimg
   order: 10
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: shortsnumbercolorprimr
+- name: shortsnumbercolorterb
   order: 11
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: numberfonttype
+- name: shortsnumbercolorprimr
   order: 12
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: teamcolortertb
+- name: numberfonttype
   order: 13
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: jerseynumbercolorterg
+- name: teamcolortertb
   order: 14
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: shortsnumbercolorprimb
+- name: jerseynumbercolorterg
   order: 15
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: jerseynamefonttype
+- name: shortsnumbercolorprimb
   order: 16
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: jerseynamelayouttype
+- name: jerseynamefonttype
   order: 17
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: jerseynumbercolorterr
+- name: jerseynamelayouttype
   order: 18
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: jerseynumbercolorprimb
+- name: jerseynumbercolorterr
   order: 19
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: jerseyshapestyle
+- name: jerseyrightsleevebadge
   order: 20
   type: int
   range:
     min: 0
-    max: 255
+    max: 9999999
   default: 0
-- name: jerseybacknameplacementcode
+- name: jerseynumbercolorprimb
   order: 21
   type: int
   range:
     min: 0
     max: 255
-  default: 1
-- name: teamcolorprimr
+  default: 0
+- name: jerseyshapestyle
   order: 22
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: jerseynamecolorg
+- name: jerseybacknameplacementcode
   order: 23
   type: int
   range:
     min: 0
     max: 255
-  default: 0
-- name: teamcolorsecg
+  default: 1
+- name: teamcolorprimr
   order: 24
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: shortsnumbercolorsecg
+- name: jerseynamecolorg
   order: 25
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: teamcolortertr
+- name: jerseyleftsleevebadge
   order: 26
   type: int
   range:
     min: 0
-    max: 255
+    max: 9999999
   default: 0
-- name: jerseynumbercolorsecg
+- name: teamcolorsecg
   order: 27
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: renderingmaterialtype
+- name: shortsnumbercolorsecg
   order: 28
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: shortsnumbercolorterr
+- name: teamcolortertr
   order: 29
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: teamcolorsecr
+- name: jerseynumbercolorsecg
   order: 30
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: jerseycollargeometrytype
+- name: renderingmaterialtype
   order: 31
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: shortsnumbercolorterg
+- name: shortsnumbercolorterr
   order: 32
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: jerseynamecolorr
+- name: teamcolorsecr
   order: 33
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: teamcolorprimb
+- name: jerseycollargeometrytype
   order: 34
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: jerseyrenderingdetailmaptype
+- name: shortsnumbercolorterg
   order: 35
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: shortsnumberfonttype
+- name: jerseynamecolorr
   order: 36
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: jerseynumbercolorsecb
+- name: teamcolorprimb
   order: 37
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: jerseynamecolorb
+- name: jerseyrenderingdetailmaptype
   order: 38
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: jerseynumbercolorterb
+- name: shortsnumberfonttype
   order: 39
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: teamcolortertg
+- name: jerseynumbercolorsecb
   order: 40
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: shortsnumbercolorsecr
+- name: jerseynamecolorb
   order: 41
   type: int
   range:
     min: 0
     max: 255
   default: 0
-- name: jerseybacknamefontcase
+- name: jerseynumbercolorterb
   order: 42
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: teamcolortertg
+  order: 43
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: shortsnumbercolorsecr
+  order: 44
+  type: int
+  range:
+    min: 0
+    max: 255
+  default: 0
+- name: jerseybacknamefontcase
+  order: 45
   type: int
   range:
     min: 0
     max: 2
   default: 0
-- name: chestbadge
-  order: 43
-  type: int
-  range:
-    min: 0
-    max: 109999
-  default: 0
 - name: teamkittypetechid
-  order: 44
+  order: 46
   type: int
   range:
     min: 0
     max: 22
   default: 0
 - name: powid
-  order: 45
+  order: 47
   type: int
   range:
     min: -1
     max: 32000
   default: -1
 - name: isinheritbasedetailmap
-  order: 46
+  order: 48
   type: int
   range:
     min: 0
     max: 1
   default: 0
 - name: islocked
-  order: 47
+  order: 49
   type: int
   range:
     min: 0
     max: 1
   default: 0
 - name: teamkitid
-  order: 48
+  order: 50
   type: int
   range:
     min: 0
     max: 16383
   default: 0
 - name: teamcolorprimpercent
-  order: 49
-  type: int
-  range:
-    min: 0
-    max: 100
-  default: 50
-- name: jerseyrightsleevebadge
-  order: 50
-  type: int
-  range:
-    min: 0
-    max: 109999
-  default: 0
-- name: teamcolorsecpercent
   order: 51
   type: int
   range:
     min: 0
     max: 100
   default: 50
-- name: jerseyleftsleevebadge
+- name: teamcolorsecpercent
   order: 52
   type: int
   range:
     min: 0
-    max: 109999
-  default: 0
+    max: 100
+  default: 50
 - name: year
   order: 53
   type: int

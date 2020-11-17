@@ -2,31 +2,28 @@
   order: 0
   type: string
   default: ''
-- name: surname
+- name: commonname
   order: 1
   type: string
   default: ''
-- name: skintypecode
+- name: surname
   order: 2
+  type: string
+  default: ''
+- name: skintypecode
+  order: 3
   type: int
   range:
     min: 0
     max: 160
   default: 0
-- name: bodytypecode
-  order: 3
-  type: int
-  range:
-    min: 1
-    max: 256
-  default: 1
 - name: haircolorcode
   order: 4
   type: int
   range:
     min: 0
     max: 15
-  default: 0
+  default: 1
 - name: facialhairtypecode
   order: 5
   type: int
@@ -34,211 +31,169 @@
     min: 0
     max: 19
   default: 0
-- name: hairtypecode
+- name: managerid
   order: 6
+  type: int
+  range:
+    min: 1
+    max: 500000
+  default: 1
+- name: hairtypecode
+  order: 7
   type: int
   range:
     min: 0
     max: 1023
   default: 0
-- name: cardstrictness
-  order: 7
-  type: int
-  range:
-    min: 0
-    max: 2
-  default: 0
-- name: shoecolorcode2
-  order: 8
-  type: int
-  range:
-    min: 0
-    max: 31
-  default: 31
 - name: headtypecode
-  order: 9
+  order: 8
   type: int
   range:
     min: 0
     max: 16000
   default: 0
-- name: foulstrictness
-  order: 10
-  type: int
-  range:
-    min: 0
-    max: 2
-  default: 1
 - name: height
-  order: 11
+  order: 9
   type: int
   range:
     min: 130
     max: 215
   default: 180
-- name: leagueid
-  order: 12
-  type: int
-  range:
-    min: 1
-    max: 4000
-  default: 1
-- name: shoetypecode
-  order: 13
+- name: seasonaloutfitid
+  order: 10
   type: int
   range:
     min: 0
-    max: 1000
-  default: 0
-- name: birthdate
-  order: 14
-  type: int
-  range:
-    min: 0
-    max: 1048575
-  default: 148733
-- name: socklengthcode
-  order: 15
-  type: int
-  range:
-    min: 0
-    max: 4
-  default: 0
+    max: 1000000
+  default: 5509
 - name: weight
-  order: 16
+  order: 11
   type: int
   range:
     min: 30
     max: 115
   default: 80
+- name: hashighqualityhead
+  order: 12
+  type: int
+  range:
+    min: 0
+    max: 1
+  default: 0
 - name: gender
-  order: 17
+  order: 13
   type: int
   range:
     min: 0
     max: 1
   default: 0
 - name: headassetid
-  order: 18
+  order: 14
   type: int
   range:
     min: 0
     max: 500000
   default: 0
+- name: ethnicity
+  order: 15
+  type: int
+  range:
+    min: 1
+    max: 11
+  default: 2
 - name: faceposerpreset
-  order: 19
+  order: 16
   type: int
   range:
     min: 0
     max: 15
   default: 0
+- name: teamid
+  order: 17
+  type: int
+  range:
+    min: 1
+    max: 200000
+  default: 1
 - name: eyebrowcode
-  order: 20
+  order: 18
   type: int
   range:
     min: 0
     max: 15
   default: 0
 - name: eyecolorcode
-  order: 21
+  order: 19
   type: int
   range:
     min: 1
     max: 16
   default: 3
-- name: jerseysleevelengthcode
-  order: 22
-  type: int
-  range:
-    min: 0
-    max: 7
-  default: 0
-- name: headclasscode
-  order: 23
+- name: personalityid
+  order: 20
   type: int
   range:
     min: 0
     max: 2
   default: 1
+- name: headclasscode
+  order: 21
+  type: int
+  range:
+    min: 0
+    max: 2
+  default: 1
+- name: nationality
+  order: 22
+  type: int
+  range:
+    min: 0
+    max: 3000
+  default: 1
 - name: sideburnscode
-  order: 24
+  order: 23
   type: int
   range:
     min: 0
     max: 3
   default: 0
-- name: isreal
-  order: 25
-  type: int
-  range:
-    min: 0
-    max: 1
-  default: 0
 - name: headvariation
-  order: 26
+  order: 24
   type: int
   range:
     min: 0
     max: 31
   default: 0
 - name: skintonecode
-  order: 27
+  order: 25
   type: int
   range:
     min: 1
     max: 11
   default: 2
-- name: shortstyle
+- name: outfitid
+  order: 26
+  type: int
+  range:
+    min: 0
+    max: 1000000
+  default: 5510
+- name: hairstylecode
+  order: 27
+  type: int
+  range:
+    min: 0
+    max: 31
+  default: 0
+- name: bodytypecode
   order: 28
   type: int
   range:
-    min: 0
-    max: 1
-  default: 0
-- name: smallsidedshoetypecode
-  order: 29
-  type: int
-  range:
-    min: 0
-    max: 1000
-  default: 500
-- name: refereeid
-  order: 30
-  type: int
-  range:
     min: 1
-    max: 500000
+    max: 512
   default: 1
-- name: nationalitycode
-  order: 31
-  type: int
-  range:
-    min: 0
-    max: 3000
-  default: 1
-- name: shoedesigncode
-  order: 32
-  type: int
-  range:
-    min: 0
-    max: 3
-  default: 0
-- name: shoecolorcode1
-  order: 33
-  type: int
-  range:
-    min: 0
-    max: 31
-  default: 30
-- name: hairstylecode
-  order: 34
-  type: int
-  range:
-    min: 0
-    max: 31
-  default: 0
 - name: facialhaircolorcode
-  order: 35
+  order: 29
   type: int
   range:
     min: 0

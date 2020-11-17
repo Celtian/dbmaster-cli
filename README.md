@@ -39,8 +39,8 @@ Example of yaml file:
 
 ```yaml
 input:
-  version: fifa20
-  folder: 'C:\Users\username\Desktop\fifa20' # folder containing tables exported by db master
+  version: fifa21
+  folder: 'C:\Users\username\Desktop\fifa21' # folder containing tables exported by db master
 
 actions: # actions will be called in this order
   - type: extend-contract # extend loans and contracts which are invalid
@@ -57,7 +57,7 @@ output:
 This example shows you comaprsion table.
 
 ```terminal
-dbmaster compare --from fifa20 --to fifa16 --table players --mode columns
+dbmaster compare --from fifa21 --to fifa16 --table players --mode columns
 ```
 
 - [from](#supported-versions-of-fifa-soccer)
@@ -82,7 +82,7 @@ dbmaster compare --from fifa20 --to fifa16 --table players --mode columns
 | **Fifa 18** | ✓         |
 | **Fifa 19** | ✓         |
 | **Fifa 20** | ✓         |
-| **Fifa 21** | ✗         |
+| **Fifa 21** | ✓         |
 
 ## Supported tables
 
