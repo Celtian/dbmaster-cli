@@ -29,7 +29,7 @@ _Go to command line and type_
 
 ### Convert
 
-This example converts supported table from Fifa 20 into Fifa 16 format. If some value of field is out of range or is missing it is filled by default value.
+This example converts supported table from Fifa 21 into Fifa 16 format. If some value of field is out of range or is missing it is filled by default value.
 
 ```terminal
 dbmaster convert --config 'C:\Users\username\Desktop\config.yml'
@@ -54,10 +54,10 @@ output:
 
 ### Compare
 
-This example shows you comaprsion table.
+This example shows you comparsion table.
 
 ```terminal
-dbmaster compare --from fifa21 --to fifa16 --table players --mode columns
+dbmaster compare --from fifa21 --to fifa16 --table players --mode column
 ```
 
 - [from](#supported-versions-of-fifa-soccer)
@@ -67,7 +67,7 @@ dbmaster compare --from fifa21 --to fifa16 --table players --mode columns
   - column - Is the column present?
   - default - What is the default value of the column?
   - order - What is the correct order of the column?
-  - range - What is the range of integer the column?
+  - range - What is the range of the integer column?
   - type - What is the correct datatype of the column?
 
 ## Supported versions of Fifa Soccer

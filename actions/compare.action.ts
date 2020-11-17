@@ -40,7 +40,7 @@ export class CompareAction extends AbstractAction {
         compare.printDiffOrder(table.value as Table);
         break;
       case CompareMode.Range:
-        console.info(chalk.green(`[${table.value}]`), chalk.yellow('What is the range of integer the column?'));
+        console.info(chalk.green(`[${table.value}]`), chalk.yellow('What is the range of the integer column?'));
         compare.printDiffRange(table.value as Table);
         break;
       case CompareMode.Type:
