@@ -15,6 +15,11 @@ import {
 } from '../transforms';
 import { OutputFormat, StreamBuilderType } from './interfaces';
 
+interface Aggregated {
+  value: string | number;
+  count: number;
+}
+
 export class StreamBuilder {
   private stream: StreamBuilderType;
 
@@ -48,6 +53,14 @@ export class StreamBuilder {
 
   public actionExtendContract(fields: Field[], refDate?: Date): StreamBuilder {
     this.stream = this.stream.pipe(new ExtendContractTransform({ fields, refDate }));
+    return this;
+  }
+
+  public actionOnData(onDataFn: (data: RawData) => any): StreamBuilder {
+    this.stream = this.stream.on('data', (buffer: Buffer) => {
+      const cur: RawData = JSON.parse(buffer.toString());
+      onDataFn(cur);
+    });
     return this;
   }
 

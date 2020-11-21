@@ -29,6 +29,9 @@ export const actionFactory = async (opts: ActionFactoryOptions): Promise<RawData
             fields = opts.output ? opts.output.fields : opts.input.fields;
             str = str.actionAppendDefault(fields);
             break;
+          case ActionType.ActionOnData:
+            str = str.actionOnData(action.onDataFn);
+            break;
           default:
             break;
         }

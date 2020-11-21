@@ -12,12 +12,14 @@ export enum ActionType {
   ActionAppendDefault = 'append-default',
   ActionExtendContract = 'extend-contract',
   ActionValidate = 'validate',
-  ActionFilter = 'filter'
+  ActionFilter = 'filter',
+  ActionOnData = 'on-data'
 }
 
 export interface ActionFactoryAction {
   type: ActionType;
   filterFn?: (data: RawData) => boolean;
+  onDataFn?: (data: RawData) => any;
 }
 
 export interface ActionFactorySource {
