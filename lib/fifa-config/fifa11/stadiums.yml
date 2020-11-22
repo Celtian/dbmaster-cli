@@ -12,6 +12,7 @@
     min: 0
     max: 255
   default: 1
+  unique: true
 - name: name
   order: 2
   type: string

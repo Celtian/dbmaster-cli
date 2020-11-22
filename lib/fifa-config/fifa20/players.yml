@@ -705,6 +705,7 @@
     min: 0
     max: 500000
   default: 1
+  unique: true
 - name: marking
   order: 101
   type: int

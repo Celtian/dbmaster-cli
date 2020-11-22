@@ -26,3 +26,4 @@
     min: 0
     max: 31
   default: 0
+  unique: true

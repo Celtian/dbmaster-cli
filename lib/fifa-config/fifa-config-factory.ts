@@ -14,6 +14,7 @@ const schema = Joi.array()
       .valid(...Object.values(Datatype))
       .required(),
     default: Joi.any().required(),
+    unique: Joi.boolean().optional(),
     range: Joi.object({
       min: Joi.number().integer().required(),
       max: Joi.number().integer().min(Joi.ref('min')).required()

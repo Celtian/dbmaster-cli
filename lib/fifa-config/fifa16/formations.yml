@@ -319,6 +319,7 @@
     min: 0
     max: 1000
   default: 1
+  unique: true
 - name: position4
   order: 57
   type: int

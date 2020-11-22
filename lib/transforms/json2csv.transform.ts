@@ -1,5 +1,5 @@
 import { Transform, TransformCallback, TransformOptions } from 'stream';
-import { Field } from '../interfaces';
+import { Datatype, Field } from '../interfaces';
 import { sortByOrder } from '../utils';
 
 export interface Json2CsvTransformOptions extends TransformOptions {
@@ -19,10 +19,20 @@ export class Json2CsvTransform extends Transform {
     const lines: string[] = [];
     const orderedFields = this.opts.fields.sort(sortByOrder);
     if (this.line === 0) {
-      lines.push(orderedFields.map((f) => f.name).join('\t'));
+      lines.push('\ufeff' + orderedFields.map((f) => f.name).join('\t'));
     }
     const oldValue = JSON.parse(chunk.toString());
-    lines.push(orderedFields.map((f) => oldValue[f.name]).join('\t'));
+
+    lines.push(
+      orderedFields
+        .map((f) => {
+          if (f.type === Datatype.Float) {
+            return String(oldValue[f.name]).replace('.', ',');
+          }
+          return oldValue[f.name];
+        })
+        .join('\t')
+    );
 
     this.push(lines.join('\r\n'));
 

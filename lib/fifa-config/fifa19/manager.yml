@@ -13,6 +13,7 @@
     min: 1
     max: 10000
   default: 1
+  unique: true
 - name: headid
   order: 3
   type: int

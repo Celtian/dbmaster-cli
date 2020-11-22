@@ -12,3 +12,4 @@
     min: 0
     max: 2047
   default: 1
+  unique: true

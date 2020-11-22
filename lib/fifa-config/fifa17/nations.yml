@@ -41,3 +41,4 @@
     min: 0
     max: 3000
   default: 1
+  unique: true

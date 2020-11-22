@@ -417,6 +417,7 @@
     min: 0
     max: 1000
   default: 16
+  unique: true
 - name: defensiverole_8
   order: 71
   type: int

@@ -415,6 +415,7 @@
     min: 1
     max: 200000
   default: 1
+  unique: true
 - name: uefa_el_wins
   order: 60
   type: int

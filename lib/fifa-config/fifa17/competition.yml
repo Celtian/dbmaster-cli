@@ -110,6 +110,7 @@
     min: 0
     max: 4095
   default: 1
+  unique: true
 - name: isballplinthenabledstage
   order: 16
   type: int

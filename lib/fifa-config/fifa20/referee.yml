@@ -209,6 +209,7 @@
     min: 1
     max: 500000
   default: 1
+  unique: true
 - name: nationalitycode
   order: 31
   type: int

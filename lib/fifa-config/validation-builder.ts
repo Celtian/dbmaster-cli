@@ -24,7 +24,11 @@ export class ValidationBuilder {
   public validationFn(field: Field): Joi.NumberSchema | Joi.StringSchema {
     switch (field.type) {
       case Datatype.Int:
-        return Joi.number().integer().required().min(field.range.min).max(field.range.max);
+        if (field.unique) {
+          return Joi.number().integer().required().min(field.range.min);
+        } else {
+          return Joi.number().integer().required().min(field.range.min).max(field.range.max);
+        }
       case Datatype.Float:
         return Joi.number().required();
       default:

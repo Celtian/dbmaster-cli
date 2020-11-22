@@ -56,6 +56,7 @@ export interface Field {
   type: Datatype;
   default: any;
   range?: Range;
+  unique?: boolean;
 }
 
 export type KeyValueFrequency = { [key: string]: string };

@@ -480,6 +480,7 @@
     min: 0
     max: 1000
   default: 16
+  unique: true
 - name: playerinstruction1
   order: 80
   type: int

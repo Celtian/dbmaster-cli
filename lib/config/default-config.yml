@@ -3,12 +3,12 @@ input:
   folder: 'examples/fifa21'
 
 actions:
-  - type: validate
+  # - type: validate
   # - type: filter
   # - type: extend-contract
-  # - type: append-default
+  - type: append-default
 
 output:
-  version: fifa21
+  version: fifa16
   folder: 'output'
-  format: json
+  # format: json

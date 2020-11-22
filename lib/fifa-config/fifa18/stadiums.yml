@@ -212,6 +212,7 @@
     min: 0
     max: 511
   default: 0
+  unique: true
 - name: cameraheight
   order: 31
   type: int

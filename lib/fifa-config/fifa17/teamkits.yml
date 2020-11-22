@@ -334,6 +334,7 @@
     min: 0
     max: 16383
   default: 0
+  unique: true
 - name: year
   order: 48
   type: int

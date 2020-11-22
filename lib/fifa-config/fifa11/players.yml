@@ -544,6 +544,7 @@
     min: 0
     max: 300000
   default: 1
+  unique: true
 - name: marking
   order: 78
   type: int

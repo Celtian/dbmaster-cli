@@ -5,6 +5,7 @@
     min: 0
     max: 255
   default: 0
+  unique: true
 - name: powid
   order: 1
   type: int

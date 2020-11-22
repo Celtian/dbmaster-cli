@@ -201,6 +201,7 @@
     min: 0
     max: 109999
   default: 1
+  unique: true
 - name: introconfetti
   order: 29
   type: int

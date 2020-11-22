@@ -9,6 +9,7 @@
     min: 0
     max: 33999
   default: 0
+  unique: true
 - name: commentaryid
   order: 2
   type: int

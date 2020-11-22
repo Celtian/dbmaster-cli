@@ -230,6 +230,7 @@
     min: 1
     max: 512
   default: 1
+  unique: true
 - name: homecitycode
   order: 34
   type: int

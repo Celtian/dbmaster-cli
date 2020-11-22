@@ -19,6 +19,7 @@
     min: 0
     max: 9999999
   default: 1
+  unique: true
 - name: competitioncolor2r
   order: 3
   type: int
