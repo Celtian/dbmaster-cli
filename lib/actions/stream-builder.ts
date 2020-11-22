@@ -5,20 +5,19 @@ import { join } from 'path';
 import { Field, RawData, Table } from '../interfaces';
 import {
   AppendDefaultTransform,
+  ApplyPlayernamesTransform,
   Csv2JsonTransform,
   ExtendContractTransform,
   FilterTransform,
   Json2CsvTransform,
   NewLineTransform,
+  ReindexMap2RawDataTransform,
+  ReindexTransform,
   SkipTransform,
   ValidateTransform
 } from '../transforms';
+import { ReindexMap } from '../utils';
 import { OutputFormat, StreamBuilderType } from './interfaces';
-
-interface Aggregated {
-  value: string | number;
-  count: number;
-}
 
 export class StreamBuilder {
   private stream: StreamBuilderType;
@@ -53,6 +52,27 @@ export class StreamBuilder {
 
   public actionExtendContract(fields: Field[], refDate?: Date): StreamBuilder {
     this.stream = this.stream.pipe(new ExtendContractTransform({ fields, refDate }));
+    return this;
+  }
+
+  public actionReindex(startingPos: number = 0): StreamBuilder {
+    this.stream = this.stream.pipe(new ReindexTransform({ startingPos }));
+    return this;
+  }
+
+  public actionApplyPlayernames(
+    reindexMap: ReindexMap[],
+    foreingKeyPrimaryColumn: string = 'nameid',
+    foreignKeyColumns: string[] = ['firstnameid', 'lastnameid', 'commonnameid', 'playerjerseynameid']
+  ): StreamBuilder {
+    this.stream = this.stream.pipe(
+      new ApplyPlayernamesTransform({ reindexMap, foreingKeyPrimaryColumn, foreignKeyColumns })
+    );
+    return this;
+  }
+
+  public actionReindexMap2RawData(primaryColumn: string): StreamBuilder {
+    this.stream = this.stream.pipe(new ReindexMap2RawDataTransform({ primaryColumn }));
     return this;
   }
 
