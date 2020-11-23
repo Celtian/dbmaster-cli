@@ -3,7 +3,7 @@ import { RawData } from '../interfaces';
 import { ReindexMap } from '../utils';
 
 export interface ReindexMap2RawDataTransformOptions extends TransformOptions {
-  primaryColumn: string; // nameid
+  primaryColumn: string;
 }
 
 export class ReindexMap2RawDataTransform extends Transform {

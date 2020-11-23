@@ -27,48 +27,13 @@ yarn add -g dbmaster-cli
 
 _Go to command line and type_
 
-### Convert
-
-This example converts supported table from Fifa 21 into Fifa 16 format. If some value of field is out of range or is missing it is filled by default value.
-
 ```terminal
-dbmaster convert --config 'C:\Users\username\Desktop\config.yml'
+dbmaster --help
 ```
 
-Example of yaml file:
+## Wiki
 
-```yaml
-input:
-  version: fifa21
-  folder: 'C:\Users\username\Desktop\fifa21' # folder containing tables exported by db master
-
-actions: # actions will be called in this order
-  - type: extend-contract # extend loans and contracts which are invalid
-  - type: append-default # appends default values to new fields
-
-output:
-  version: fifa16
-  folder: 'C:\Users\username\Desktop\fifa16'
-  format: csv # csv or json
-```
-
-### Compare
-
-This example shows you comparsion table.
-
-```terminal
-dbmaster compare --from fifa21 --to fifa16 --table players --mode column
-```
-
-- [from](#supported-versions-of-fifa-soccer)
-- [to](#supported-versions-of-fifa-soccer)
-- [table](#supported-tables)
-- mode
-  - column - Is the column present?
-  - default - What is the default value of the column?
-  - order - What is the correct order of the column?
-  - range - What is the range of the integer column?
-  - type - What is the correct datatype of the column?
+Please check wiki [here](https://github.com/Celtian/dbmaster-cli/wiki).
 
 ## Supported versions of Fifa Soccer
 

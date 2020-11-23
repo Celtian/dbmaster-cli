@@ -2,7 +2,7 @@ import { LineStream } from 'byline';
 import { createReadStream, createWriteStream, mkdirSync } from 'fs';
 import { decodeStream } from 'iconv-lite';
 import { join } from 'path';
-import { Field, RawData, Table } from '../interfaces';
+import { Field, PLAYERNAMES_PRIMARY_COLUMN, playersPlayernamesColumns, RawData, Table } from '../interfaces';
 import {
   AppendDefaultTransform,
   ApplyPlayernamesTransform,
@@ -62,8 +62,8 @@ export class StreamBuilder {
 
   public actionApplyPlayernames(
     reindexMap: ReindexMap[],
-    foreingKeyPrimaryColumn: string = 'nameid',
-    foreignKeyColumns: string[] = ['firstnameid', 'lastnameid', 'commonnameid', 'playerjerseynameid']
+    foreingKeyPrimaryColumn: string = PLAYERNAMES_PRIMARY_COLUMN,
+    foreignKeyColumns: string[] = playersPlayernamesColumns
   ): StreamBuilder {
     this.stream = this.stream.pipe(
       new ApplyPlayernamesTransform({ reindexMap, foreingKeyPrimaryColumn, foreignKeyColumns })
@@ -76,9 +76,9 @@ export class StreamBuilder {
     return this;
   }
 
-  public actionOnData(onDataFn: (data: RawData) => any): StreamBuilder {
+  public actionOnData(onDataFn: (data: any) => void): StreamBuilder {
     this.stream = this.stream.on('data', (buffer: Buffer) => {
-      const cur: RawData = JSON.parse(buffer.toString());
+      const cur = JSON.parse(buffer.toString());
       onDataFn(cur);
     });
     return this;

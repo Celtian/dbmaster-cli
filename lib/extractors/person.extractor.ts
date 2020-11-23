@@ -83,7 +83,7 @@ export class PersonExtractor {
     const list: Person[] = [];
     return new Promise(async (resolve, reject) =>
       new StreamBuilder(inputFolder, table, this.config[table])
-        .onData((buffer: Buffer) => list.push(JSON.parse(buffer.toString())))
+        .actionOnData((data: any) => list.push(data))
         .onFinish(() => resolve(list))
         .onError(() => reject(list))
     );

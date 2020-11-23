@@ -3,8 +3,8 @@ import { ReindexMap } from '../utils';
 
 export interface ApplyPlayernamesTransformOptions extends TransformOptions {
   reindexMap: ReindexMap[];
-  foreingKeyPrimaryColumn: string; // nameid
-  foreignKeyColumns: string[]; // firstnameid, lastnameid, commonnameid, playerjerseynameid
+  foreingKeyPrimaryColumn: string;
+  foreignKeyColumns: string[];
 }
 
 // only works with the table players

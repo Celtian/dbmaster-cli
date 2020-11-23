@@ -11,7 +11,7 @@ export const reindexMap = async (inputFolder: string, table: Table, fields: Fiel
   return new Promise(async (resolve, reject) =>
     new StreamBuilder(inputFolder, table, fields)
       .actionReindex(0)
-      .onData((buffer: Buffer) => list.push(JSON.parse(buffer.toString())))
+      .actionOnData((data: any) => list.push(data))
       .onFinish(() => resolve(list))
       .onError(() => reject(list))
   );
