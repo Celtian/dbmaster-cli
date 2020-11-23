@@ -9,14 +9,14 @@ export class CompareCommand extends AbstractCommand {
     program
       .command('compare')
       .description('Compare Fifa table definitions')
-      .requiredOption('-f, --from <fifa>', `Source version of FIFA (${Object.values(Fifa).join(' | ')}).`)
-      .requiredOption('-t, --to <fifa>', `Target version of FIFA (${Object.values(Fifa).join(' | ')}).`)
-      .requiredOption('-b, --table <table>', `Selected table (${Object.values(Table).join(' | ')}).`)
-      .requiredOption('-m, --mode <mode>', `Selected mode (${Object.values(CompareMode).join(' | ')}).`)
+      .requiredOption('-l, --left <string>', `Version of FIFA - left column (${Object.values(Fifa).join(' | ')}).`)
+      .requiredOption('-r, --right <string>', `Version of FIFA - right column (${Object.values(Fifa).join(' | ')}).`)
+      .requiredOption('-b, --table <string>', `Selected table (${Object.values(Table).join(' | ')}).`)
+      .requiredOption('-m, --mode <string>', `Selected mode (${Object.values(CompareMode).join(' | ')}).`)
       .action(async (command: Command) => {
         const options: Input[] = [];
-        options.push({ name: 'from', value: command.from });
-        options.push({ name: 'to', value: command.to });
+        options.push({ name: 'left', value: command.left });
+        options.push({ name: 'right', value: command.right });
         options.push({ name: 'table', value: command.table });
         options.push({ name: 'mode', value: command.mode });
         await this.action.handle([], options);

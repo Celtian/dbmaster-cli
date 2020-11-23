@@ -4,24 +4,24 @@ import { minimizePlayernames } from '../lib/utils';
 import { removeUnusedPlayernames } from '../lib/utils/remove-unused-playernames.utils';
 import { AbstractAction } from './abstract.action';
 
-export enum PlayernameTypeAction {
+export enum PlayernameMode {
   RemoveUnused = 'remove-unused',
   Minimize = 'minimize'
 }
 
 export class PlayernameAction extends AbstractAction {
   public async handle(inputs: Input[], options: Input[]): Promise<void> {
-    const fifa = options.find((option) => option.name === 'fifa');
-    const input = options.find((option) => option.name === 'input');
-    const output = options.find((option) => option.name === 'output');
-    const action = options.find((option) => option.name === 'action-type');
+    const fifa = options.find((option) => option.name === 'fifa').value as Fifa;
+    const input = options.find((option) => option.name === 'input').value as string;
+    const output = options.find((option) => option.name === 'output').value as string;
+    const mode = options.find((option) => option.name === 'mode').value as PlayernameMode;
 
-    if (action.value === PlayernameTypeAction.Minimize) {
-      await minimizePlayernames(fifa.value as Fifa, input.value as string, output.value as string);
-    } else if (action.value === PlayernameTypeAction.RemoveUnused) {
-      await removeUnusedPlayernames(fifa.value as Fifa, input.value as string, output.value as string);
+    if (mode === PlayernameMode.Minimize) {
+      await minimizePlayernames(fifa, input, output);
+    } else if (mode === PlayernameMode.RemoveUnused) {
+      await removeUnusedPlayernames(fifa, input, output);
     } else {
-      console.error('Invalid argument "action-type".');
+      console.error('Invalid argument "mode".');
     }
   }
 }

@@ -7,7 +7,7 @@ export class ConvertCommand extends AbstractCommand {
     program
       .command('convert')
       .description('Convert Fifa tables')
-      .requiredOption('-c, --config <path>', 'Path to config.yml')
+      .requiredOption('-c, --config <string>', 'Path to config.yml')
       .action(async (command: Command) => {
         const options: Input[] = [];
         options.push({ name: 'config', value: command.config });

@@ -8,7 +8,7 @@ import { AbstractAction } from './abstract.action';
 
 export class DistributionAction extends AbstractAction {
   public async handle(inputs: Input[], options: Input[]): Promise<void> {
-    const path = options.find((option) => option.name === 'path').value as string;
+    const inputFolder = options.find((option) => option.name === 'input').value as string;
     const table = options.find((option) => option.name === 'table').value as Table;
     const fifa = options.find((option) => option.name === 'fifa').value as Fifa;
     const column = options.find((option) => option.name === 'column').value as string;
@@ -21,9 +21,9 @@ export class DistributionAction extends AbstractAction {
     }
 
     if (column) {
-      await this.printColumnDistribution(cfg, path, fifa, table, column);
+      await this.printColumnDistribution(cfg, inputFolder, fifa, table, column);
     } else {
-      await this.printTableDistribution(cfg, path, fifa, table);
+      await this.printTableDistribution(cfg, inputFolder, fifa, table);
     }
   }
 
