@@ -39,6 +39,7 @@ const readConfig = (fifa: Fifa, table: Table): Field[] => {
 export const fifaConfigFactory = (fifa: Fifa): FifaConfig => {
   const config = new FifaConfig();
   config.competition = readConfig(fifa, Table.Competition);
+  config.dcplayernames = readConfig(fifa, Table.DcPlayerNames);
   config.formations = readConfig(fifa, Table.Formations);
   config.leaguerefereelinks = readConfig(fifa, Table.LeagueRefereeLinks);
   config.leagues = readConfig(fifa, Table.Leagues);

@@ -91,6 +91,7 @@ dbmaster compare --from fifa21 --to fifa16 --table players --mode column
 | Table                  | Supported |
 | ---------------------- | --------- |
 | **competition**        | ✓         |
+| **dcplayernames**      | ✓         |
 | **formations**         | ✓         |
 | **leaguerefereelinks** | ✓         |
 | **leagues**            | ✓         |

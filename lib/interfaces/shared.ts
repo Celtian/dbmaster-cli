@@ -14,6 +14,7 @@ export enum Fifa {
 
 export enum Table {
   Competition = 'competition',
+  DcPlayerNames = 'dcplayernames',
   Formations = 'formations',
   LeagueRefereeLinks = 'leaguerefereelinks',
   Leagues = 'leagues',

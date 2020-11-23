@@ -1,0 +1,12 @@
+- name: name
+  order: 0
+  type: string
+  default: ''
+- name: nameid
+  order: 1
+  type: int
+  range:
+    min: 34000
+    max: 40000
+  default: 34000
+  unique: true

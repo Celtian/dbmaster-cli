@@ -2,6 +2,7 @@ import { Field } from '../interfaces';
 
 export class FifaConfig {
   public competition: Field[] = [];
+  public dcplayernames: Field[] = [];
   public formations: Field[] = [];
   public leaguerefereelinks: Field[] = [];
   public leagues: Field[] = [];
