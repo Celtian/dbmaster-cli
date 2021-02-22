@@ -11,7 +11,7 @@ const bootstrap = async (): Promise<void> => {
     console.info(chalk.green(`[${fifa}]`));
     const manager = new PersonExtractor(fifa);
     const input = join(cwd(), 'examples', fifa);
-    const output = join(cwd(), 'lib', 'config-generated', fifa, 'person.yml');
+    const output = join(cwd(), 'cfg', 'enums', fifa, 'person.yml');
     const cfg = await manager.getAttributes(input);
     mkdirSync(dirname(output), { recursive: true });
     writeFileSync(

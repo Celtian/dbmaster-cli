@@ -2,6 +2,7 @@ import { readFileSync } from 'fs';
 import * as Joi from 'joi';
 import { safeLoad } from 'js-yaml';
 import { join } from 'path';
+import { cwd } from 'process';
 import { Datatype, Field, Fifa, Table } from '../interfaces';
 import { FifaConfig } from './fifa-config';
 
@@ -24,7 +25,7 @@ const schema = Joi.array()
 const readConfig = (fifa: Fifa, table: Table): Field[] => {
   let json: string | object;
   try {
-    const yaml = readFileSync(join(__dirname, fifa, `${table}.yml`)).toString();
+    const yaml = readFileSync(join(cwd(), 'cfg', 'tables', fifa, `${table}.yml`)).toString();
     json = safeLoad(yaml);
   } catch (e) {
     throw new Error(e);

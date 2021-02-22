@@ -2,6 +2,7 @@ import { readFileSync } from 'fs';
 import * as Joi from 'joi';
 import { safeLoad } from 'js-yaml';
 import { join } from 'path';
+import { cwd } from 'process';
 import { Fifa } from '../interfaces';
 
 enum ConfigFile {
@@ -13,7 +14,7 @@ const schema = Joi.object();
 const readConfig = (fifa: Fifa, configFile: ConfigFile): any => {
   let json: string | object;
   try {
-    const yaml = readFileSync(join(__dirname, fifa, `${configFile}.yml`)).toString();
+    const yaml = readFileSync(join(cwd(), 'cfg', 'enums', fifa, `${configFile}.yml`)).toString();
     json = safeLoad(yaml);
   } catch (e) {
     throw new Error(e);

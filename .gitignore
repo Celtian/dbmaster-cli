@@ -6,6 +6,5 @@ package-lock.json
 # package directories
 node_modules
 dist
-examples
 output
 coverage
