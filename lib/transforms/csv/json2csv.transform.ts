@@ -1,6 +1,6 @@
 import { Transform, TransformCallback, TransformOptions } from 'stream';
-import { Datatype, Field } from '../interfaces';
-import { sortByOrder } from '../utils';
+import { Datatype, Field, RawData } from '../../interfaces';
+import { bufferToData, sortByOrder } from '../../utils';
 
 export interface Json2CsvTransformOptions extends TransformOptions {
   fields: Field[];
@@ -21,7 +21,9 @@ export class Json2CsvTransform extends Transform {
     if (this.line === 0) {
       lines.push('\ufeff' + orderedFields.map((f) => f.name).join('\t'));
     }
-    const oldValue = JSON.parse(chunk.toString());
+    const oldValue = bufferToData<RawData>(chunk);
+
+    console.log(oldValue, 'x');
 
     lines.push(
       orderedFields

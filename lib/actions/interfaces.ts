@@ -1,7 +1,8 @@
 import { WriteStream } from 'fs';
+import { PassThrough } from 'stream';
 import { Field, RawData, Table } from '../interfaces';
 
-export type StreamBuilderType = NodeJS.ReadWriteStream | WriteStream;
+export type StreamBuilderType = NodeJS.ReadWriteStream | WriteStream | PassThrough;
 
 export enum OutputFormat {
   Csv = 'csv',

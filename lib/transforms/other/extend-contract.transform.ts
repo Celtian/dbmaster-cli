@@ -1,7 +1,8 @@
 import { Transform, TransformCallback, TransformOptions } from 'stream';
-import { ValidationBuilder } from '../fifa-config';
-import { DateGenerator } from '../generators';
-import { Field, RawData } from '../interfaces';
+import { ValidationBuilder } from '../../fifa-config';
+import { DateGenerator } from '../../generators';
+import { Field, RawData } from '../../interfaces';
+import { bufferToData, dataToString } from '../../utils';
 
 export interface ExtendContractTransformOptions extends TransformOptions {
   fields: Field[];
@@ -21,7 +22,7 @@ export class ExtendContractTransform extends Transform {
   }
 
   public _transform(chunk: Buffer, encoding: string, callback: TransformCallback): void {
-    let object: RawData = JSON.parse(chunk.toString());
+    let object = bufferToData<RawData>(chunk);
 
     object = this.updateField(
       object,
@@ -37,7 +38,7 @@ export class ExtendContractTransform extends Transform {
       () => this.dg.loanDateEnd()
     );
 
-    this.push(JSON.stringify(object));
+    this.push(dataToString<RawData>(object));
     callback();
   }
 

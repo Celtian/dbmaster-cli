@@ -1,13 +1,14 @@
-import { StreamBuilder } from '../actions';
-import { FifaConfig, fifaConfigFactory } from '../fifa-config';
-import { Field, Fifa, PLAYERNAMES_PRIMARY_COLUMN, playersPlayernamesColumns, Table } from '../interfaces';
+import { ReadWriteStreamBuilder } from '../../actions';
+import { FifaConfig, fifaConfigFactory } from '../../fifa-config';
+import { Field, Fifa, RawData, Table } from '../../interfaces';
+import { PLAYERNAMES_PRIMARY_COLUMN, playersPlayernamesColumns, RemoveUnusedStats } from './interfaces';
 
 const usedUniquePlayernameIds = async (inputFolder: string, table: Table, fields: Field[]): Promise<Set<number>> => {
   const list = new Set<number>();
   let totalCount = 0;
   return new Promise(async (resolve, reject) =>
-    new StreamBuilder(inputFolder, table, fields)
-      .actionOnData((data: any) => {
+    new ReadWriteStreamBuilder(inputFolder, table, fields)
+      .actionOnData<RawData>((data) => {
         for (const col of playersPlayernamesColumns) {
           list.add(data[col] as number);
         }
@@ -24,14 +25,14 @@ const writePlayernames = async (
   inputFolder: string,
   outputFolder: string,
   uniqueIds: Set<number>
-): Promise<{ before: number; after: number }> => {
+): Promise<RemoveUnusedStats> => {
   let before = 0;
   let after = 0;
   return new Promise(async (resolve, reject) =>
-    new StreamBuilder(inputFolder, table, fields)
-      .onData(() => before++)
+    new ReadWriteStreamBuilder(inputFolder, table, fields)
+      .actionOnData(() => before++)
       .actionFilter((x) => uniqueIds.has(x[PLAYERNAMES_PRIMARY_COLUMN] as number))
-      .onData(() => after++)
+      .actionOnData(() => after++)
       .actionWrite(outputFolder, fields)
       .onFinish(() => resolve({ before, after }))
       .onError(() => reject({ before, after }))

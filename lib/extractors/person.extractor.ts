@@ -1,4 +1,4 @@
-import { StreamBuilder } from '../actions';
+import { ReadWriteStreamBuilder } from '../actions';
 import { FifaConfig, fifaConfigFactory } from '../fifa-config';
 import {
   AttributeByGender,
@@ -82,7 +82,7 @@ export class PersonExtractor {
   private async readTable(inputFolder: string, table: Table): Promise<Person[]> {
     const list: Person[] = [];
     return new Promise(async (resolve, reject) =>
-      new StreamBuilder(inputFolder, table, this.config[table])
+      new ReadWriteStreamBuilder(inputFolder, table, this.config[table])
         .actionOnData((data: any) => list.push(data))
         .onFinish(() => resolve(list))
         .onError(() => reject(list))

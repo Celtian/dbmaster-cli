@@ -10,9 +10,11 @@ export class ConvertAction extends AbstractAction {
     const path = options.find((option) => option.name === 'config').value as string;
     const cfg = configFactory(path);
     for (const table of Object.values(Table)) {
-      console.info(chalk.green(`[${table}]`));
-      const list = await actionFactory(cfg.tableConfig(table));
-      console.info('Converted :', chalk.yellow(list.length));
+      if (table === Table.PlayerNames) {
+        console.info(chalk.green(`[${table}]`));
+        const list = await actionFactory(cfg.tableConfig(table));
+        console.info('Converted :', chalk.yellow(list.length));
+      }
     }
   }
 }

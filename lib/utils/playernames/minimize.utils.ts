@@ -1,57 +1,48 @@
-import { StreamBuilder } from '../actions';
-import { FifaConfig, fifaConfigFactory } from '../fifa-config';
-import { Field, Fifa, PLAYERNAMES_PRIMARY_COLUMN, Table } from '../interfaces';
-import { ReindexMap } from './reindex.utils';
+import { ReadWriteStreamBuilder } from '../../actions';
+import { FifaConfig, fifaConfigFactory } from '../../fifa-config';
+import { Field, Fifa, IndexedRawData, RawData, Table } from '../../interfaces';
+import { MinimizePlayernamesStats, PLAYERNAMES_PRIMARY_COLUMN } from './interfaces';
 
 const writePlayers = async (
   table: Table,
   fields: Field[],
-  reindexMap: ReindexMap[],
+  reindexMap: IndexedRawData[],
   inputFolder: string,
   outputFolder: string
 ): Promise<void> => {
-  const a = true;
   return new Promise(async (resolve, reject) =>
-    new StreamBuilder(inputFolder, table, fields)
+    new ReadWriteStreamBuilder(inputFolder, table, fields)
       .actionApplyPlayernames(reindexMap)
       .actionWrite(outputFolder, fields)
       .onFinish(() => resolve())
-      .onError(() => resolve())
+      .onError(() => reject())
   );
 };
-
-interface WritePlayernamesStats {
-  reindexMap: ReindexMap[];
-  minBefore: number;
-  maxBefore: number;
-  minAfter: number;
-  maxAfter: number;
-}
 
 const writePlayernames = async (
   table: Table,
   fields: Field[],
   inputFolder: string,
   outputFolder: string
-): Promise<WritePlayernamesStats> => {
+): Promise<MinimizePlayernamesStats> => {
   const range = fields.find((f) => f.name === PLAYERNAMES_PRIMARY_COLUMN).range;
-  const reindexMap: ReindexMap[] = [];
+  const reindexMap: IndexedRawData[] = [];
   let minBefore = range.max;
   let maxBefore = range.min;
   let minAfter = minBefore;
   let maxAfter = maxBefore;
   return new Promise(async (resolve, reject) =>
-    new StreamBuilder(inputFolder, table, fields)
-      .actionOnData((data: any) => {
-        const id: number = data[PLAYERNAMES_PRIMARY_COLUMN];
+    new ReadWriteStreamBuilder(inputFolder, table, fields)
+      .actionOnData<RawData>((data) => {
+        const id: number = data[PLAYERNAMES_PRIMARY_COLUMN] as number;
         minBefore = id < minBefore ? id : minBefore;
         maxBefore = id > maxBefore ? id : maxBefore;
       })
       .actionReindex(range.min)
-      .actionOnData((data: any) => reindexMap.push(data))
-      .actionReindexMap2RawData(PLAYERNAMES_PRIMARY_COLUMN)
-      .actionOnData((data: any) => {
-        const id: number = data[PLAYERNAMES_PRIMARY_COLUMN];
+      .actionOnData<IndexedRawData>((data) => reindexMap.push(data))
+      .actionIndexed2Raw(PLAYERNAMES_PRIMARY_COLUMN)
+      .actionOnData<RawData>((data) => {
+        const id: number = data[PLAYERNAMES_PRIMARY_COLUMN] as number;
         minAfter = id < minAfter ? id : minAfter;
         maxAfter = id > maxAfter ? id : maxAfter;
       })

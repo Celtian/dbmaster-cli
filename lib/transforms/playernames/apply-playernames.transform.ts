@@ -1,8 +1,9 @@
 import { Transform, TransformCallback, TransformOptions } from 'stream';
-import { ReindexMap } from '../utils';
+import { IndexedRawData, RawData } from '../../interfaces';
+import { bufferToData, dataToString } from '../../utils';
 
 export interface ApplyPlayernamesTransformOptions extends TransformOptions {
-  reindexMap: ReindexMap[];
+  reindexMap: IndexedRawData[];
   foreingKeyPrimaryColumn: string;
   foreignKeyColumns: string[];
 }
@@ -17,7 +18,7 @@ export class ApplyPlayernamesTransform extends Transform {
   }
 
   public _transform(chunk: Buffer, encoding: string, callback: TransformCallback): void {
-    let object = JSON.parse(chunk.toString());
+    let object = bufferToData<RawData>(chunk);
 
     for (const col of this.opts.foreignKeyColumns) {
       object = {
@@ -26,7 +27,7 @@ export class ApplyPlayernamesTransform extends Transform {
       };
     }
 
-    this.push(JSON.stringify(object));
+    this.push(dataToString<RawData>(object));
     callback();
   }
 

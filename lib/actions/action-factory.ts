@@ -2,7 +2,7 @@ import { existsSync } from 'fs';
 import { join } from 'path';
 import { Field, RawData } from '../interfaces';
 import { ActionFactoryOptions, ActionType } from './interfaces';
-import { StreamBuilder } from './stream-builder';
+import { ReadWriteStreamBuilder } from './read-write-stream-builder';
 
 export const actionFactory = async (opts: ActionFactoryOptions): Promise<RawData[]> => {
   const list: RawData[] = [];
@@ -11,7 +11,7 @@ export const actionFactory = async (opts: ActionFactoryOptions): Promise<RawData
     if (!exists) {
       resolve([]);
     } else {
-      let str = new StreamBuilder(opts.input.folder, opts.table, opts.input.fields);
+      let str = new ReadWriteStreamBuilder(opts.input.folder, opts.table, opts.input.fields);
 
       let fields: Field[] = opts.input.fields;
       for (const action of opts.actions) {
@@ -37,7 +37,7 @@ export const actionFactory = async (opts: ActionFactoryOptions): Promise<RawData
         }
       }
 
-      str = str.onData((buffer: Buffer) => list.push(JSON.parse(buffer.toString())));
+      str = str.actionOnData((buffer: Buffer) => list.push(JSON.parse(buffer.toString())));
 
       if (opts.output) {
         str = str.actionWrite(opts.output.folder, opts.output.fields, opts.output.format);

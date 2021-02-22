@@ -6,6 +6,7 @@
     "dbmaster": "bin/dbmaster.js"
   },
   "scripts": {
+    "demo": "ts-node demo.ts",
     "start": "ts-node bin/dbmaster.ts",
     "start:watch": "tsc-watch --project tsconfig.json --onSuccess \"yarn start\"",
     "build": "tsc",

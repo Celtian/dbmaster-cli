@@ -1,5 +1,6 @@
 import { Transform, TransformCallback, TransformOptions } from 'stream';
-import { RawData } from '../interfaces';
+import { RawData } from '../../interfaces';
+import { bufferToData } from '../../utils';
 
 export interface FilterTransformOptions extends TransformOptions {
   filterFn: (data: RawData) => boolean;
@@ -14,7 +15,7 @@ export class FilterTransform extends Transform {
   }
 
   public _transform(chunk: Buffer, encoding: string, callback: TransformCallback): void {
-    const object: RawData = JSON.parse(chunk.toString());
+    const object = bufferToData<RawData>(chunk);
 
     if (this.opts.filterFn(object)) {
       this.push(chunk);

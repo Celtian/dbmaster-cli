@@ -1,4 +1,6 @@
 import { Transform, TransformCallback, TransformOptions } from 'stream';
+import { IndexedRawData, RawData } from '../../interfaces';
+import { bufferToData, dataToString } from '../../utils';
 
 export interface ReindexTransformOptions extends TransformOptions {
   startingPos: number;
@@ -15,8 +17,10 @@ export class ReindexTransform extends Transform {
   }
 
   public _transform(chunk: Buffer, encoding: string, callback: TransformCallback): void {
-    const object = JSON.parse(chunk.toString());
-    this.push(JSON.stringify({ key: this.currentPos, value: object }));
+    const value = bufferToData<RawData>(chunk);
+    this.push(
+      dataToString<IndexedRawData>({ key: this.currentPos, value })
+    );
     this.currentPos++;
     callback();
   }
