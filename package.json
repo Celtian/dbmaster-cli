@@ -58,6 +58,8 @@
     "os-name": "^5.1.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
     "@types/byline": "^4.2.33",
     "@types/clear": "^0.1.2",
     "@types/faker": "^5.1.4",
