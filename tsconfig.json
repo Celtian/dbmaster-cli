@@ -17,6 +17,6 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true
   },
-  "include": ["actions", "bin", "commands", "lib"],
+  "include": ["actions", "bin", "commands", "src"],
   "exclude": ["dist/**/*", "*/tests/**/*"]
 }

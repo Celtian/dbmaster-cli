@@ -3,8 +3,8 @@ import { mkdirSync, writeFileSync } from 'fs';
 import { safeDump } from 'js-yaml';
 import { dirname, join } from 'path';
 import { cwd } from 'process';
-import { PersonExtractor } from '../lib/extractors';
-import { Fifa } from '../lib/interfaces';
+import { PersonExtractor } from '../src/extractors';
+import { Fifa } from '../src/interfaces';
 
 const bootstrap = async (): Promise<void> => {
   for (const fifa of Object.values(Fifa)) {

@@ -1,7 +1,7 @@
 import chalk from 'chalk';
 import { Input } from '../commands';
-import { CompareFifaConfig } from '../lib/fifa-config';
-import { Fifa, Table } from '../lib/interfaces';
+import { CompareFifaConfig } from '../src/fifa-config';
+import { Fifa, Table } from '../src/interfaces';
 import { AbstractAction } from './abstract.action';
 
 export enum CompareMode {

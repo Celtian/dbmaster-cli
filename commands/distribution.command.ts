@@ -1,5 +1,5 @@
 import { Command, CommanderStatic } from 'commander';
-import { Fifa, Table } from '../lib/interfaces';
+import { Fifa, Table } from '../src/interfaces';
 import { AbstractCommand } from './abstract.command';
 import { Input } from './command.input';
 

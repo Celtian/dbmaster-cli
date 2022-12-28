@@ -1,9 +1,9 @@
 import chalk from 'chalk';
 import { Input } from '../commands';
-import { actionFactory, ActionType } from '../lib/actions';
-import { FifaConfig, fifaConfigFactory } from '../lib/fifa-config';
-import { Fifa, RawData, Table } from '../lib/interfaces';
-import { Aggregated, aggregateFn, sortAggregateFn, sortByOrder } from '../lib/utils';
+import { actionFactory, ActionType } from '../src/actions';
+import { FifaConfig, fifaConfigFactory } from '../src/fifa-config';
+import { Fifa, RawData, Table } from '../src/interfaces';
+import { Aggregated, aggregateFn, sortAggregateFn, sortByOrder } from '../src/utils';
 import { AbstractAction } from './abstract.action';
 
 export class DistributionAction extends AbstractAction {

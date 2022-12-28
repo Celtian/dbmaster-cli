@@ -1,8 +1,8 @@
 import chalk from 'chalk';
 import { platform, release } from 'os';
 import { default as osName } from 'os-name';
-import { BANNER } from '../lib/ui';
 import { version } from '../package.json';
+import { BANNER } from '../src/ui';
 import { AbstractAction } from './abstract.action';
 
 export class InfoAction extends AbstractAction {
