@@ -1,8 +1,8 @@
 import chalk from 'chalk';
 import { Input } from '../commands';
-import { actionFactory } from '../lib/actions';
-import { configFactory } from '../lib/config';
-import { Table } from '../lib/interfaces';
+import { actionFactory } from '../src/actions';
+import { configFactory } from '../src/config';
+import { Table } from '../src/interfaces';
 import { AbstractAction } from './abstract.action';
 
 export class ConvertAction extends AbstractAction {

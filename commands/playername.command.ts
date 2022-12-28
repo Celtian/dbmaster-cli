@@ -1,6 +1,6 @@
 import { Command, CommanderStatic } from 'commander';
 import { PlayernameMode } from '../actions/playername.action';
-import { Fifa } from '../lib/interfaces';
+import { Fifa } from '../src/interfaces';
 import { AbstractCommand } from './abstract.command';
 import { Input } from './command.input';
 

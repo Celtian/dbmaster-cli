@@ -14,8 +14,11 @@
     "copydist": "ts-node --project scripts/tsconfig.ts-node.json scripts/copy-dist",
     "postbuild": "yarn copydist",
     "local": "npm i -g && dbmaster",
+    "husky:install": "husky install",
     "gpr:setup": "ts-node --project scripts/tsconfig.ts-node.json scripts/gpr-setup",
     "postversion": "git push && git push --follow-tags",
+    "publish:beta": "yarn && yarn build && npm publish --folder dist --tag beta",
+    "release:beta": "npm version prerelease -m \"chore(update): prelease %s β\"",
     "release:patch": "git checkout master && npm version patch -m \"chore(update): patch release %s 🐛 \"",
     "release:minor": "git checkout master && npm version minor -m \"chore(update): release %s 🚀\"",
     "release:major": "git checkout master && npm version major -m \"chore(update): major release %s 💥 \""
@@ -50,35 +53,34 @@
     "clear": "^0.1.0",
     "commander": "^6.2.0",
     "faker": "^5.1.0",
-    "figlet": "^1.5.0",
+    "figlet": "^1.5.2",
     "iconv-lite": "^0.6.2",
-    "joi": "^17.3.0",
+    "joi": "^17.7.0",
     "js-yaml": "^3.14.0",
     "os-name": "^4.0.0"
   },
   "devDependencies": {
-    "@types/byline": "^4.2.32",
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "@types/byline": "^4.2.33",
     "@types/clear": "^0.1.0",
     "@types/faker": "^5.1.4",
-    "@types/figlet": "^1.2.1",
-    "@types/fs-extra": "^9.0.7",
+    "@types/figlet": "^1.5.5",
+    "@types/fs-extra": "^9.0.13",
     "@types/jest": "^26.0.15",
-    "@types/joi": "^14.3.4",
+    "@types/joi": "^17.2.3",
     "@types/js-yaml": "^3.12.5",
     "@types/node": "^14.14.5",
-    "fs-extra": "^9.1.0",
-    "husky": "^4.3.0",
+    "@typescript-eslint/eslint-plugin": "^5.47.1",
+    "@typescript-eslint/parser": "^5.47.1",
+    "eslint": "^8.30.0",
+    "fs-extra": "^11.1.0",
+    "husky": "^8.0.2",
     "jest": "^26.6.3",
-    "prettier": "^2.1.2",
-    "pretty-quick": "^3.1.0",
+    "prettier": "^2.8.1",
+    "pretty-quick": "^3.1.3",
     "ts-jest": "^26.4.4",
-    "ts-node": "^9.0.0",
-    "tslint": "^6.1.3",
+    "ts-node": "^10.9.1",
     "typescript": "^4.0.5"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
   }
 }

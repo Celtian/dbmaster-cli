@@ -20,7 +20,7 @@ export class ValidateTransform extends Transform {
   public _transform(chunk: Buffer, encoding: string, callback: TransformCallback): void {
     const data: RawData = JSON.parse(chunk.toString());
     const validated = this.schema.validate(data);
-    if (validated.error || validated.errors || validated.warning) {
+    if (validated.error || validated.warning) {
       this.push(JSON.stringify(validated));
     }
     callback();

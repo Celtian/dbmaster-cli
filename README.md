@@ -83,7 +83,7 @@ Please check wiki [here](https://github.com/Celtian/dbmaster-cli/wiki).
 
 ## License
 
-Copyright &copy; 2020 [Dominik Hladik](https://github.com/Celtian)
+Copyright &copy; 2020 - 2022 [Dominik Hladik](https://github.com/Celtian)
 
 All contents are licensed under the [MIT license].
 

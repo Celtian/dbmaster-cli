@@ -1,5 +1,5 @@
-import { DateGenerator } from '../../../lib/generators';
-import { PersonRole } from '../../../lib/interfaces';
+import { DateGenerator } from '../../../src/generators';
+import { PersonRole } from '../../../src/interfaces';
 
 describe('Date Generator', () => {
   let generator: DateGenerator;

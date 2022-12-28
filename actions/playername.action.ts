@@ -1,7 +1,7 @@
 import { Input } from '../commands';
-import { Fifa } from '../lib/interfaces';
-import { minimizePlayernames } from '../lib/utils';
-import { removeUnusedPlayernames } from '../lib/utils/remove-unused-playernames.utils';
+import { Fifa } from '../src/interfaces';
+import { minimizePlayernames } from '../src/utils';
+import { removeUnusedPlayernames } from '../src/utils/remove-unused-playernames.utils';
 import { AbstractAction } from './abstract.action';
 
 export enum PlayernameMode {

@@ -3,7 +3,7 @@ import { CommanderStatic } from 'commander';
 import { CompareAction, ConvertAction, InfoAction } from '../actions';
 import { DistributionAction } from '../actions/distribution.action';
 import { PlayernameAction } from '../actions/playername.action';
-import { ERROR_PREFIX } from '../lib/ui';
+import { ERROR_PREFIX } from '../src/ui';
 import { CompareCommand } from './compare.command';
 import { ConvertCommand } from './convert.command';
 import { DistributionCommand } from './distribution.command';

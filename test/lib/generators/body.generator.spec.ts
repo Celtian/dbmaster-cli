@@ -1,5 +1,5 @@
-import { BodyGenerator, BodyGeneratorOptions } from '../../../lib/generators';
-import { BodyTypeCode } from '../../../lib/interfaces';
+import { BodyGenerator, BodyGeneratorOptions } from '../../../src/generators';
+import { BodyTypeCode } from '../../../src/interfaces';
 
 describe('Body Generator', () => {
   let generator: BodyGenerator;
