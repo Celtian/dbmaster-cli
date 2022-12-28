@@ -79,23 +79,23 @@ export class BodyGenerator {
   }
 
   private isHeightValid(height: number): boolean {
-    const { error, errors } = Joi.number()
+    const { error } = Joi.number()
       .integer()
       .min(this.config.minHeight)
       .max(this.config.maxHeight)
       .required()
       .validate(height);
-    return !error && !errors;
+    return !error;
   }
 
   private isWeightValid(weight: number): boolean {
-    const { error, errors } = Joi.number()
+    const { error } = Joi.number()
       .integer()
       .min(this.config.minWeight)
       .max(this.config.maxWeight)
       .required()
       .validate(weight);
-    return !error && !errors;
+    return !error;
   }
 
   private bmi(height: number, weight: number): number {
